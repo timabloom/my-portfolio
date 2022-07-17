@@ -1,9 +1,8 @@
 {
   "name": "my-portfolio",
-  "version": "0.1.0",
   "private": true,
   "description": "Timothy Magee's portfolio website",
-  "homepage": "https://github.com/timabloom/my-portfolio",
+  "homepage": "/",
   "author": {
     "name": "Timothy Magee",
     "email": "timabloom@proton.me"
@@ -11,7 +10,6 @@
   "keywords": [
     "portfolio"
   ],
-  "license": "GPLv3",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.4",
     "@chakra-ui/react": "^2.2.4",
