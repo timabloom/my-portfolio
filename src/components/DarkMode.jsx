@@ -14,14 +14,44 @@ function DarkMode() {
       colorModeClicked === false
     ) {
       setIconToggle(
-        <SunIcon w="25px" h="25px" _hover={{ color: "orange.400" }} />
+        <AnimatePresence>
+          <motion.div
+            key="sunIcon"
+            exit={{
+              position: "absolute",
+              zIndex: -1,
+              opacity: 0,
+              scale: 0,
+              rotate: 0,
+              transition: { duration: 0.5 },
+            }}
+            transition={{ duration: 1, delay: 0.1 }}
+          >
+            <SunIcon w="25px" h="25px" _hover={{ color: "orange.400" }} />
+          </motion.div>
+        </AnimatePresence>
       );
     } else if (
       localStorage.getItem("chakra-ui-color-mode") === "dark" &&
       colorModeClicked === false
     ) {
       setIconToggle(
-        <MoonIcon w="25px" h="25px" _hover={{ color: "yellow.400" }} />
+        <AnimatePresence>
+          <motion.div
+            key="moonIcon"
+            exit={{
+              position: "absolute",
+              zIndex: -1,
+              opacity: 0,
+              scale: 0,
+              rotate: 120,
+              transition: { duration: 0.5 },
+            }}
+            transition={{ duration: 1, delay: 0.1 }}
+          >
+            <MoonIcon w="25px" h="25px" _hover={{ color: "yellow.400" }} />
+          </motion.div>
+        </AnimatePresence>
       );
     } else if (colorMode === "dark") {
       setIconToggle(
@@ -40,7 +70,7 @@ function DarkMode() {
               rotate: 120,
               transition: { duration: 0.5 },
             }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.1 }}
           >
             <MoonIcon w="25px" h="25px" _hover={{ color: "yellow.400" }} />
           </motion.div>
@@ -59,10 +89,11 @@ function DarkMode() {
               position: "absolute",
               zIndex: -1,
               opacity: 0,
+              scale: 0,
               rotate: 0,
               transition: { duration: 0.5 },
             }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.1 }}
           >
             <SunIcon w="25px" h="25px" _hover={{ color: "orange.400" }} />
           </motion.div>
