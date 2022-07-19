@@ -24,44 +24,68 @@ const item = {
 function WelcomeAnimation() {
   const [typingAnimation, setTypingAnimation] = useState();
   const [animationDone, setAnimationDone] = useRecoilState(homeAnimation);
-  const [textMarker, setTextMarker] = useState({
-    fontSize: "4xl",
-    position: "static",
-    top: 0,
-    borderLeft: "3px solid",
-    opacity: 1,
-    repeat: 1,
-    repeatDelay: 0,
-  });
-  const [markerDone, setMarkerDone] = useState(false);
+  const [textMarkerAnimation, setTextMarkerAnimation] = useState();
 
   useEffect(() => {
-    setTimeout(() => {
-      if (animationDone === false) {
-        setTimeout(() => {
-          setTextMarker({
-            fontSize: "18px",
-            position: "relative",
-            top: "19px",
-            borderLeft: "2px solid",
-            opacity: 1,
-            repeat: 1,
-            repeatDelay: 0,
-          });
-        }, "7826");
-        setTimeout(() => {
-          setTextMarker({
-            fontSize: "18px",
-            position: "relative",
-            top: "19px",
-            borderLeft: "2px solid",
-            opacity: [0, 0, 1, 1],
+    setAnimationDone(true);
+    if (animationDone === false) {
+      setTextMarkerAnimation(
+        <motion.span
+          animate={{ opacity: [0, 0, 1, 1] }}
+          transition={{
             repeat: Infinity,
             repeatDelay: 0.22,
-          });
-        }, "17000");
-        setAnimationDone(true);
-        setMarkerDone(true);
+          }}
+        >
+          <Text display="inline" borderLeft="3px solid"></Text>
+        </motion.span>
+      );
+      setTimeout(() => {
+        setTextMarkerAnimation(
+          <motion.span
+            animate={{ opacity: 1 }}
+            transition={{
+              repeat: 1,
+              repeatDelay: 0,
+            }}
+          >
+            <Text display="inline" borderLeft="3px solid"></Text>
+          </motion.span>
+        );
+        setTimeout(() => {
+          setTextMarkerAnimation(
+            <motion.span
+              animate={{ opacity: 1 }}
+              transition={{
+                repeat: 1,
+                repeatDelay: 0,
+              }}
+            >
+              <Text
+                fontSize="18"
+                display="inline"
+                borderLeft="2px solid"
+              ></Text>
+            </motion.span>
+          );
+        }, "7822");
+        setTimeout(() => {
+          setTextMarkerAnimation(
+            <motion.span
+              animate={{ opacity: [0, 0, 1, 1] }}
+              transition={{
+                repeat: Infinity,
+                repeatDelay: 0.22,
+              }}
+            >
+              <Text
+                fontSize="18"
+                display="inline"
+                borderLeft="2px solid"
+              ></Text>
+            </motion.span>
+          );
+        }, "16750");
         setTypingAnimation(
           <motion.div variants={container} initial="hidden" animate="visible">
             {[
@@ -128,8 +152,6 @@ function WelcomeAnimation() {
                     variants={item}
                     style={{
                       fontSize: "18px",
-                      position: "relative",
-                      top: "19px",
                       opacity: 0,
                     }}
                   >
@@ -153,8 +175,6 @@ function WelcomeAnimation() {
                     variants={item}
                     style={{
                       fontSize: "18px",
-                      position: "relative",
-                      top: "19px",
                     }}
                   >
                     {letters}
@@ -174,9 +194,9 @@ function WelcomeAnimation() {
             })}
           </motion.div>
         );
-      }
-    }, "1000");
-    if (animationDone === true) {
+      }, "2400");
+    } else {
+      setTextMarkerAnimation(<Text display="none" />);
       setTypingAnimation(
         <Box>
           <Text fontSize="36px">
@@ -184,7 +204,7 @@ function WelcomeAnimation() {
             <br />
             Timothy Magee,
           </Text>
-          <Text display="inline" fontSize="18px">
+          <Text fontSize="18px" mt="24px">
             and Welcome to My Portfolio.
           </Text>
         </Box>
@@ -198,28 +218,11 @@ function WelcomeAnimation() {
       ml="70px"
       p="70px 70px 70px 0"
       borderTop="1px solid"
-      fontSize={textMarker.fontSize}
+      fontSize="4xl"
       fontWeight="bold"
     >
       {typingAnimation}
-      {markerDone ? (
-        <motion.span
-          animate={{ opacity: textMarker.opacity }}
-          transition={{
-            repeat: textMarker.repeat,
-            repeatDelay: textMarker.repeatDelay,
-          }}
-        >
-          <Text
-            display="inline"
-            borderLeft={textMarker.borderLeft}
-            position={textMarker.position}
-            top={textMarker.top}
-          ></Text>
-        </motion.span>
-      ) : (
-        <Text display="none" />
-      )}
+      {textMarkerAnimation}
     </Box>
   );
 }
