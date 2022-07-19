@@ -9,7 +9,7 @@ const container = {
   visible: {
     display: "inline",
     transition: {
-      staggerChildren: 0.25,
+      staggerChildren: 0.3,
     },
   },
 };
@@ -36,119 +36,147 @@ function WelcomeAnimation() {
   const [markerDone, setMarkerDone] = useState(false);
 
   useEffect(() => {
-    if (animationDone === false) {
-      setTimeout(() => {
-        setTextMarker({
-          fontSize: "18px",
-          position: "relative",
-          top: "19px",
-          borderLeft: "2px solid",
-          opacity: 1,
-          repeat: 1,
-          repeatDelay: 0,
-        });
-      }, "6560");
-      setTimeout(() => {
-        setTextMarker({
-          fontSize: "18px",
-          position: "relative",
-          top: "19px",
-          borderLeft: "2px solid",
-          opacity: [0, 0, 1, 1],
-          repeat: Infinity,
-          repeatDelay: 0.22,
-        });
-      }, "14200");
-      setAnimationDone(true);
-      setMarkerDone(true);
-      setTypingAnimation(
-        <motion.div variants={container} initial="hidden" animate="visible">
-          {[
-            "H",
-            "e",
-            "l",
-            "l",
-            "o",
-            "!",
-            " ",
-            "I",
-            " ",
-            "A",
-            "m",
-            <br />,
-            "T",
-            "i",
-            "m",
-            "o",
-            "t",
-            "h",
-            "y",
-            " ",
-            "M",
-            "a",
-            "g",
-            "e",
-            "e",
-            ",",
-            <br />,
-            "a",
-            "n",
-            "d",
-            " ",
-            "W",
-            "e",
-            "l",
-            "c",
-            "o",
-            "m",
-            "e",
-            " ",
-            "t",
-            "o",
-            " ",
-            "M",
-            "y",
-            " ",
-            "P",
-            "o",
-            "r",
-            "t",
-            "f",
-            "o",
-            "l",
-            "i",
-            "o",
-            ".",
-          ].map((letters, index) => {
-            if (index > 26) {
-              return (
-                <motion.span
-                  key={index}
-                  variants={item}
-                  style={{
-                    fontSize: "18px",
-                    position: "relative",
-                    top: "19px",
-                  }}
-                >
-                  {letters}
-                </motion.span>
-              );
-            } else {
-              return (
-                <motion.span
-                  key={index}
-                  variants={item}
-                  style={{ fontSize: "36px" }}
-                >
-                  {letters}
-                </motion.span>
-              );
-            }
-          })}
-        </motion.div>
-      );
-    } else {
+    setTimeout(() => {
+      if (animationDone === false) {
+        setTimeout(() => {
+          setTextMarker({
+            fontSize: "18px",
+            position: "relative",
+            top: "19px",
+            borderLeft: "2px solid",
+            opacity: 1,
+            repeat: 1,
+            repeatDelay: 0,
+          });
+        }, "7826");
+        setTimeout(() => {
+          setTextMarker({
+            fontSize: "18px",
+            position: "relative",
+            top: "19px",
+            borderLeft: "2px solid",
+            opacity: [0, 0, 1, 1],
+            repeat: Infinity,
+            repeatDelay: 0.22,
+          });
+        }, "17000");
+        setAnimationDone(true);
+        setMarkerDone(true);
+        setTypingAnimation(
+          <motion.div variants={container} initial="hidden" animate="visible">
+            {[
+              "H",
+              "e",
+              "l",
+              "l",
+              "o",
+              "!",
+              "-",
+              "I",
+              "-",
+              "A",
+              "m",
+              <br />,
+              "T",
+              "i",
+              "m",
+              "o",
+              "t",
+              "h",
+              "y",
+              "-",
+              "M",
+              "a",
+              "g",
+              "e",
+              "e",
+              ",",
+              <br />,
+              "a",
+              "n",
+              "d",
+              ";",
+              "W",
+              "e",
+              "l",
+              "c",
+              "o",
+              "m",
+              "e",
+              ";",
+              "t",
+              "o",
+              ";",
+              "M",
+              "y",
+              ";",
+              "P",
+              "o",
+              "r",
+              "t",
+              "f",
+              "o",
+              "l",
+              "i",
+              "o",
+              ".",
+            ].map((letters, index) => {
+              if (letters === ";") {
+                return (
+                  <motion.span
+                    key={index}
+                    variants={item}
+                    style={{
+                      fontSize: "18px",
+                      position: "relative",
+                      top: "19px",
+                      opacity: 0,
+                    }}
+                  >
+                    {letters}
+                  </motion.span>
+                );
+              } else if (letters === "-") {
+                return (
+                  <motion.span
+                    key={index}
+                    variants={item}
+                    style={{ fontSize: "36px", opacity: 0 }}
+                  >
+                    {letters}
+                  </motion.span>
+                );
+              } else if (index > 26) {
+                return (
+                  <motion.span
+                    key={index}
+                    variants={item}
+                    style={{
+                      fontSize: "18px",
+                      position: "relative",
+                      top: "19px",
+                    }}
+                  >
+                    {letters}
+                  </motion.span>
+                );
+              } else {
+                return (
+                  <motion.span
+                    key={index}
+                    variants={item}
+                    style={{ fontSize: "36px" }}
+                  >
+                    {letters}
+                  </motion.span>
+                );
+              }
+            })}
+          </motion.div>
+        );
+      }
+    }, "1000");
+    if (animationDone === true) {
       setTypingAnimation(
         <Box>
           <Text fontSize="36px">
