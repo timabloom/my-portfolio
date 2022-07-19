@@ -1,4 +1,4 @@
-import { Box, IconButton, useColorMode } from "@chakra-ui/react";
+import { IconButton, useColorMode } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
@@ -113,7 +113,7 @@ function DarkMode() {
   }
 
   return (
-    <Box align="center" w="110px">
+    <>
       <IconButton
         bg="none"
         _hover={{ bg: "none" }}
@@ -126,7 +126,7 @@ function DarkMode() {
         onClick={handleClick}
         icon={iconToggle}
       />
-    </Box>
+    </>
   );
 }
 

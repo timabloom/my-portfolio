@@ -36,9 +36,11 @@ function WelcomeAnimation() {
             repeat: Infinity,
             repeatDelay: 0.22,
           }}
-        >
-          <Text display="inline" borderLeft="3px solid"></Text>
-        </motion.span>
+          style={{
+            display: "inline",
+            borderLeft: "3px solid",
+          }}
+        ></motion.span>
       );
       setTimeout(() => {
         setTextMarkerAnimation(
@@ -48,9 +50,11 @@ function WelcomeAnimation() {
               repeat: 1,
               repeatDelay: 0,
             }}
-          >
-            <Text display="inline" borderLeft="3px solid"></Text>
-          </motion.span>
+            style={{
+              display: "inline",
+              borderLeft: "3px solid",
+            }}
+          ></motion.span>
         );
         setTimeout(() => {
           setTextMarkerAnimation(
@@ -60,13 +64,12 @@ function WelcomeAnimation() {
                 repeat: 1,
                 repeatDelay: 0,
               }}
-            >
-              <Text
-                fontSize="18"
-                display="inline"
-                borderLeft="2px solid"
-              ></Text>
-            </motion.span>
+              style={{
+                fontSize: "18px",
+                display: "inline",
+                borderLeft: "2px solid",
+              }}
+            ></motion.span>
           );
         }, "7822");
         setTimeout(() => {
@@ -77,13 +80,12 @@ function WelcomeAnimation() {
                 repeat: Infinity,
                 repeatDelay: 0.22,
               }}
-            >
-              <Text
-                fontSize="18"
-                display="inline"
-                borderLeft="2px solid"
-              ></Text>
-            </motion.span>
+              style={{
+                fontSize: "18px",
+                display: "inline",
+                borderLeft: "2px solid",
+              }}
+            ></motion.span>
           );
         }, "16750");
         setTypingAnimation(
@@ -196,9 +198,8 @@ function WelcomeAnimation() {
         );
       }, "2400");
     } else {
-      setTextMarkerAnimation(<Text display="none" />);
       setTypingAnimation(
-        <Box>
+        <>
           <Text fontSize="36px">
             Hello! I Am
             <br />
@@ -207,8 +208,9 @@ function WelcomeAnimation() {
           <Text fontSize="18px" mt="24px">
             and Welcome to My Portfolio.
           </Text>
-        </Box>
+        </>
       );
+      setTextMarkerAnimation(<Text display="none" />);
     }
   }, []);
 
