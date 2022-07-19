@@ -7,6 +7,7 @@ function DarkMode() {
   const { colorMode, toggleColorMode } = useColorMode();
   const [iconToggle, setIconToggle] = useState();
   const [colorModeClicked, setColorModeClicked] = useState(false);
+  const [clickTimer, setClickTimer] = useState(false);
 
   useEffect(() => {
     if (
@@ -22,7 +23,7 @@ function DarkMode() {
               zIndex: -1,
               opacity: 0,
               scale: 0,
-              rotate: 0,
+              rotate: -180,
               transition: { duration: 0.5 },
             }}
             transition={{ duration: 1, delay: 0.1 }}
@@ -44,7 +45,7 @@ function DarkMode() {
               zIndex: -1,
               opacity: 0,
               scale: 0,
-              rotate: 120,
+              rotate: 180,
               transition: { duration: 0.5 },
             }}
             transition={{ duration: 1, delay: 0.1 }}
@@ -67,7 +68,7 @@ function DarkMode() {
               zIndex: -1,
               opacity: 0,
               scale: 0,
-              rotate: 120,
+              rotate: 180,
               transition: { duration: 0.5 },
             }}
             transition={{ duration: 1, delay: 0.1 }}
@@ -103,8 +104,12 @@ function DarkMode() {
   }, [colorMode, colorModeClicked]);
 
   function handleClick() {
+    setClickTimer(true);
     setColorModeClicked(true);
     toggleColorMode();
+    setTimeout(() => {
+      setClickTimer(false);
+    }, "600");
   }
 
   return (
@@ -115,6 +120,9 @@ function DarkMode() {
         _active={{
           bg: "none",
         }}
+        opacity="1"
+        disabled={clickTimer}
+        _disabled
         onClick={handleClick}
         icon={iconToggle}
       />
