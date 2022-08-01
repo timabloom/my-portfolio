@@ -113,7 +113,7 @@ function DarkMode() {
   }
 
   return (
-    <Box ml="70px">
+    <Box mr="30px">
       <IconButton
         bg="none"
         _hover={{ bg: "none" }}

@@ -1,8 +1,9 @@
 import { Box, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { useRecoilState } from "recoil";
-import { homeAnimation } from "../../Recoil/atom";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { homeAnimation } from "../../Recoil/homeAnimation/atom";
+import { language } from "../../Recoil/language/atom";
 
 const container = {
   hidden: { display: "inline" },
@@ -24,6 +25,7 @@ const item = {
 function WelcomeAnimation() {
   const [typingAnimation, setTypingAnimation] = useState();
   const [animationDone, setAnimationDone] = useRecoilState(homeAnimation);
+  const languageToggle = useRecoilValue(language);
   const [textMarkerAnimation, setTextMarkerAnimation] = useState();
 
   useEffect(() => {
@@ -223,8 +225,10 @@ function WelcomeAnimation() {
       fontSize="4xl"
       fontWeight="bold"
     >
-      {typingAnimation}
-      {textMarkerAnimation}
+      {languageToggle === "GB"
+        ? typingAnimation
+        : "Animation under utveckling."}
+      {languageToggle === "GB" ? textMarkerAnimation : ""}
     </Box>
   );
 }
