@@ -5,7 +5,6 @@ import DarkMode from "./DarkMode";
 import { useRecoilState } from "recoil";
 import { language } from "../Recoil/language/atom";
 
-
 function Header() {
   const [languageToggle, setLanguageToggle] = useRecoilState(language);
   const [grayFlagSE, setGrayFlagSE] = useState("grayscale(100%)");
@@ -15,13 +14,13 @@ function Header() {
 
   function handleFlagClicked(flag) {
     if (flag === "SE") {
-      setLanguageToggle("SE")
+      setLanguageToggle("SE");
       setGrayFlagGB("grayscale(100%)");
       setGrayFlagSE("");
       setFlagDisabledSE(true);
       setFlagDisabledGB(false);
     } else {
-      setLanguageToggle("GB")
+      setLanguageToggle("GB");
       setGrayFlagGB("");
       setGrayFlagSE("grayscale(100%)");
       setFlagDisabledSE(false);
@@ -34,38 +33,26 @@ function Header() {
       justify="space-between"
       align="center"
       p="30px 0 30px 0"
-      m="0 70px 0 70px"
+      m="0 200px 0 200px"
     >
-      <Link w="219px" fontSize="xl" as={ReachLink} to="/">
-      {languageToggle === "GB"
-          ? "My Portfolio"
-          : "Min Portfölj"}
+      <Link w="309px" fontSize="xl" as={ReachLink} to="/">
+        {languageToggle === "GB" ? "My Portfolio" : "Min Portfolio"}
       </Link>
       <Box>
         <Link mr={7} as={ReachLink} to="/">
-        {languageToggle === "GB"
-          ? "Home"
-          : "Hem"}
+          {languageToggle === "GB" ? "Home" : "Hem"}
         </Link>
         <Link mr={7} as={ReachLink} to="/About">
-        {languageToggle === "GB"
-          ? "About"
-          : "Om mig"}
+          {languageToggle === "GB" ? "About" : "Om mig"}
         </Link>
         <Link mr={7} as={ReachLink} to="/Projects">
-        {languageToggle === "GB"
-          ? "Projects"
-          : "Projekt"}
+          {languageToggle === "GB" ? "Projects" : "Projekt"}
         </Link>
         <Link mr={7} as={ReachLink} to="/Uses">
-        {languageToggle === "GB"
-          ? "Uses"
-          : "Verktyg"}
+          {languageToggle === "GB" ? "Uses" : "Verktyg"}
         </Link>
         <Link as={ReachLink} to="/Contact">
-        {languageToggle === "GB"
-          ? "Contact"
-          : "Kontakt"}
+          {languageToggle === "GB" ? "Contact" : "Kontakt"}
         </Link>
       </Box>
       <Flex alignItems="center">
