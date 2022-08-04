@@ -1,13 +1,16 @@
-import { IconButton, useColorMode, Flex, Text, Box } from "@chakra-ui/react";
+import { IconButton, useColorMode, Flex, Text } from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
+import { useRecoilValue } from "recoil";
+import { language } from "../Recoil/language/atom";
 
 function DarkMode() {
   const { colorMode, toggleColorMode } = useColorMode();
   const [iconToggle, setIconToggle] = useState();
   const [colorModeClicked, setColorModeClicked] = useState(false);
   const [clickTimer, setClickTimer] = useState(false);
+  const languageToggle = useRecoilValue(language);
 
   useEffect(() => {
     if (
@@ -113,20 +116,25 @@ function DarkMode() {
   }
 
   return (
-    <Flex w="130px" justifyContent="space-between" mr="30px" align="center">
-        <Text>Color Mode:</Text>
-        <IconButton
-          bg="none"
-          _hover={{ bg: "none" }}
-          _active={{
-            bg: "none",
-          }}
-          opacity="1"
-          disabled={clickTimer}
-          _disabled
-          onClick={handleClick}
-          icon={iconToggle}
-        />
+    <Flex w="130px" justifyContent="space-between" mr="21px" align="center">
+      {languageToggle === "GB" ? (
+        <Text mr="5px">Appearance:</Text>
+      ) : (
+        <Text ml="12px">Utseende:</Text>
+      )}
+
+      <IconButton
+        bg="none"
+        _hover={{ bg: "none" }}
+        _active={{
+          bg: "none",
+        }}
+        opacity="1"
+        disabled={clickTimer}
+        _disabled
+        onClick={handleClick}
+        icon={iconToggle}
+      />
     </Flex>
   );
 }
