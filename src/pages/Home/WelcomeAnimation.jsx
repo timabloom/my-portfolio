@@ -219,7 +219,7 @@ function WelcomeAnimation() {
   return (
     <Box
       h="300px"
-      ml="200px"
+      ml="80px"
       p="70px 70px 70px 0"
       borderTop="1px solid"
       fontSize="4xl"

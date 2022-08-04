@@ -26,9 +26,11 @@ function Footer() {
           <FontAwesomeIcon icon={faEnvelope} size="2x" fixedWidth />
         </Link>
       </Box>
-      <Text>       {languageToggle === "GB"
-          ? "Vestibulum accumsan placerat tellus" 
-          : "Morbi cursus bibendum vestibulum."}</Text>
+      <Text>
+        {languageToggle === "GB"
+          ? "Vestibulum accumsan placerat tellus"
+          : "Morbi cursus bibendum vestibulum."}
+      </Text>
     </Flex>
   );
 }
