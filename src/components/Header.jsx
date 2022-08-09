@@ -37,7 +37,7 @@ function Header() {
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (!refNav.current.contains(event.target)) {
+      if (refNav.current && !refNav.current.contains(event.target)) {
         setIsOpen(false);
       }
     }
