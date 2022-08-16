@@ -30,7 +30,7 @@ function MeAnimation() {
   return (
     <Box w="45%">
       <Image
-        alt="Animation of me yyping on a keyboard"
+        alt="Animation of me typing on a keyboard"
         src={meAnimation}
         borderTop="solid 1px"
       ></Image>
