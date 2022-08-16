@@ -2,7 +2,6 @@ import { Box, Image } from "@chakra-ui/react";
 import typingGif from "../../assets/typing.gif";
 import wavingGif from "../../assets/waving.gif";
 import typingStill from "../../assets/typing-still.png";
-import wavingStill from "../../assets/waving-still.png";
 import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { homeAnimation } from "../../Recoil/homeAnimation/atom";
@@ -20,8 +19,11 @@ function MeAnimation() {
       setTimeout(() => {
         setMeAnimation(wavingGif);
       }, "18400");
+      setTimeout(() => {
+        setMeAnimation(typingGif);
+      }, "24400");
     } else {
-      setMeAnimation(wavingStill);
+      setMeAnimation(typingGif);
     }
   }, []);
 
