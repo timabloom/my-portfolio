@@ -23,7 +23,8 @@ const item = {
 };
 
 function WelcomeAnimation() {
-  const [typingAnimation, setTypingAnimation] = useState();
+  const [typingAnimationTop, setTypingAnimationTop] = useState();
+  const [typingAnimationBottom, setTypingAnimationBottom] = useState();
   const [animationDone, setAnimationDone] = useRecoilState(homeAnimation);
   const languageToggle = useRecoilValue(language);
   const [textMarkerAnimation, setTextMarkerAnimation] = useState();
@@ -58,39 +59,7 @@ function WelcomeAnimation() {
             }}
           ></motion.span>
         );
-        setTimeout(() => {
-          setTextMarkerAnimation(
-            <motion.span
-              animate={{ opacity: 1 }}
-              transition={{
-                repeat: 1,
-                repeatDelay: 0,
-              }}
-              style={{
-                fontSize: "18px",
-                display: "inline",
-                borderLeft: "2px solid",
-              }}
-            ></motion.span>
-          );
-        }, "7822");
-        setTimeout(() => {
-          setTextMarkerAnimation(
-            <motion.span
-              animate={{ opacity: [0, 0, 1, 1] }}
-              transition={{
-                repeat: Infinity,
-                repeatDelay: 0.22,
-              }}
-              style={{
-                fontSize: "18px",
-                display: "inline",
-                borderLeft: "2px solid",
-              }}
-            ></motion.span>
-          );
-        }, "16750");
-        setTypingAnimation(
+        setTypingAnimationTop(
           <motion.div variants={container} initial="hidden" animate="visible">
             {[
               "H",
@@ -119,6 +88,66 @@ function WelcomeAnimation() {
               "e",
               "e",
               ",",
+            ].map((letters, index) => {
+              if (letters === "-") {
+                return (
+                  <motion.span
+                    key={index}
+                    variants={item}
+                    style={{ fontSize: "36px", opacity: 0 }}
+                  >
+                    {letters}
+                  </motion.span>
+                );
+              } else {
+                return (
+                  <motion.span
+                    key={index}
+                    variants={item}
+                    style={{ fontSize: "36px" }}
+                  >
+                    {letters}
+                  </motion.span>
+                );
+              }
+            })}
+          </motion.div>
+        );
+      }, "2400");
+      setTimeout(() => {
+        setTextMarkerAnimation(
+          <motion.span
+            animate={{ opacity: 1 }}
+            transition={{
+              repeat: 1,
+              repeatDelay: 0,
+            }}
+            style={{
+              fontSize: "18px",
+              display: "inline",
+              borderLeft: "2px solid",
+            }}
+          ></motion.span>
+        );
+        setTimeout(() => {
+          setTextMarkerAnimation(
+            <motion.span
+              animate={{ opacity: [0, 0, 1, 1] }}
+              transition={{
+                repeat: Infinity,
+                repeatDelay: 0.22,
+              }}
+              style={{
+                fontSize: "18px",
+                display: "inline",
+                borderLeft: "2px solid",
+              }}
+            ></motion.span>
+          );
+        }, "9400");
+        setTypingAnimationBottom(
+          <motion.div variants={container} initial="hidden" animate="visible">
+            {[
               <br />,
               "a",
               "n",
@@ -162,17 +191,7 @@ function WelcomeAnimation() {
                     {letters}
                   </motion.span>
                 );
-              } else if (letters === "-") {
-                return (
-                  <motion.span
-                    key={index}
-                    variants={item}
-                    style={{ fontSize: "36px", opacity: 0 }}
-                  >
-                    {letters}
-                  </motion.span>
-                );
-              } else if (index > 26) {
+              } else {
                 return (
                   <motion.span
                     key={index}
@@ -184,33 +203,23 @@ function WelcomeAnimation() {
                     {letters}
                   </motion.span>
                 );
-              } else {
-                return (
-                  <motion.span
-                    key={index}
-                    variants={item}
-                    style={{ fontSize: "36px" }}
-                  >
-                    {letters}
-                  </motion.span>
-                );
               }
             })}
           </motion.div>
         );
-      }, "2400");
+      }, "10000");
     } else {
-      setTypingAnimation(
-        <>
-          <Text fontSize="36px">
-            Hello! I Am
-            <br />
-            Timothy Magee,
-          </Text>
-          <Text fontSize="18px" mt="24px">
-            and Welcome to My Portfolio.
-          </Text>
-        </>
+      setTypingAnimationTop(
+        <Text fontSize="36px">
+          Hello! I Am
+          <br />
+          Timothy Magee,
+        </Text>
+      );
+      setTypingAnimationBottom(
+        <Text fontSize="18px" mt="24px">
+          and Welcome to My Portfolio.
+        </Text>
       );
       setTextMarkerAnimation(<Text display="none" />);
     }
@@ -226,7 +235,10 @@ function WelcomeAnimation() {
       fontWeight="bold"
     >
       {languageToggle === "GB"
-        ? typingAnimation
+        ? typingAnimationTop
+        : "Animation under utveckling."}
+      {languageToggle === "GB"
+        ? typingAnimationBottom
         : "Animation under utveckling."}
       {languageToggle === "GB" ? textMarkerAnimation : ""}
     </Box>
