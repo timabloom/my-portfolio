@@ -23,15 +23,15 @@ function GifAnimation() {
     }
     if (animationDone === false) {
       setMeAnimation(typingGif);
-      const firstTimer = setTimeout(() => {
+      const timer1 = setTimeout(() => {
         setMeAnimation(wavingGif);
       }, count1);
-      const secondTimer = setTimeout(() => {
+      const timer2 = setTimeout(() => {
         setMeAnimation(typingGif);
       }, count2);
       return () => {
-        clearTimeout(firstTimer);
-        clearTimeout(secondTimer);
+        clearTimeout(timer1);
+        clearTimeout(timer2);
       };
     } else {
       setMeAnimation(typingGif);

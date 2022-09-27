@@ -34,18 +34,18 @@ function TextAnimation() {
     setAnimationDone(true);
     let textTop = [];
     let textBottom = [];
-    let timer1 = "2400";
-    let timer2 = "";
-    let timer3 = "";
+    let count1 = "2400";
+    let count2 = "";
+    let count3 = "";
     if (languageToggle === "GB" || languageToggle === null) {
-      timer2 = "10000";
-      timer3 = "19400";
+      count2 = "10000";
+      count3 = "19400";
       const text = retrieveText("GB");
       textTop = text.textTop;
       textBottom = text.textBottom;
     } else {
-      timer2 = "11000";
-      timer3 = "21500";
+      count2 = "11000";
+      count3 = "21500";
       const text = retrieveText("SE");
       textTop = text.textTop;
       textBottom = text.textBottom;
@@ -64,7 +64,7 @@ function TextAnimation() {
           }}
         ></motion.span>
       );
-      const firstTimer = setTimeout(() => {
+      const timer1 = setTimeout(() => {
         setTextMarkerAnimation(
           <motion.span
             animate={{ opacity: 1 }}
@@ -105,8 +105,8 @@ function TextAnimation() {
             })}
           </motion.div>
         );
-      }, timer1);
-      const secondTimer = setTimeout(() => {
+      }, count1);
+      const timer2 = setTimeout(() => {
         setTextMarkerAnimation(
           <motion.span
             animate={{ opacity: 1 }}
@@ -153,8 +153,8 @@ function TextAnimation() {
             })}
           </motion.div>
         );
-      }, timer2);
-      const thirdTimer = setTimeout(() => {
+      }, count2);
+      const timer3 = setTimeout(() => {
         setTextMarkerAnimation(
           <motion.span
             animate={{ opacity: [0, 0, 1, 1] }}
@@ -169,11 +169,11 @@ function TextAnimation() {
             }}
           ></motion.span>
         );
-      }, timer3);
+      }, count3);
       return () => {
-        clearTimeout(firstTimer);
-        clearTimeout(secondTimer);
-        clearTimeout(thirdTimer);
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+        clearTimeout(timer3);
       };
     } else {
       setTypingAnimationTop(
