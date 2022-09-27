@@ -31,7 +31,6 @@ function TextAnimation() {
   const [textMarkerAnimation, setTextMarkerAnimation] = useState();
 
   useEffect(() => {
-    setAnimationDone(true);
     let textTop = [];
     let textBottom = [];
     let count1 = "2400";
@@ -174,6 +173,7 @@ function TextAnimation() {
         clearTimeout(timer1);
         clearTimeout(timer2);
         clearTimeout(timer3);
+        setAnimationDone(true);
       };
     } else {
       setTypingAnimationTop(
