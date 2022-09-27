@@ -2,6 +2,7 @@ import { Box, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
+import { default as retrieveText } from "../../data/textAnimation";
 import { homeAnimation } from "../../Recoil/homeAnimation/atom";
 import { language } from "../../Recoil/language/atom";
 
@@ -36,138 +37,18 @@ function TextAnimation() {
     let timer1 = "2400";
     let timer2 = "";
     let timer3 = "";
-    if (languageToggle === "GB") {
+    if (languageToggle === "GB" || languageToggle === null) {
       timer2 = "10000";
       timer3 = "19400";
-      textTop = [
-        "H",
-        "e",
-        "l",
-        "l",
-        "o",
-        "!",
-        "-",
-        "I",
-        "-",
-        "A",
-        "m",
-        <br />,
-        "T",
-        "i",
-        "m",
-        "o",
-        "t",
-        "h",
-        "y",
-        "-",
-        "M",
-        "a",
-        "g",
-        "e",
-        "e",
-        ",",
-      ];
-      textBottom = [
-        <br />,
-        "a",
-        "n",
-        "d",
-        ";",
-        "W",
-        "e",
-        "l",
-        "c",
-        "o",
-        "m",
-        "e",
-        ";",
-        "t",
-        "o",
-        ";",
-        "M",
-        "y",
-        ";",
-        "P",
-        "o",
-        "r",
-        "t",
-        "f",
-        "o",
-        "l",
-        "i",
-        "o",
-        ".",
-      ];
+      const text = retrieveText("GB");
+      textTop = text.textTop;
+      textBottom = text.textBottom;
     } else {
       timer2 = "11000";
       timer3 = "21500";
-      textTop = [
-        "H",
-        "e",
-        "j",
-        "!",
-        "-",
-        "J",
-        "a",
-        "g",
-        "-",
-        "H",
-        "e",
-        "t",
-        "e",
-        "r",
-        <br />,
-        "T",
-        "i",
-        "m",
-        "o",
-        "t",
-        "h",
-        "y",
-        "-",
-        "M",
-        "a",
-        "g",
-        "e",
-        "e",
-        ",",
-      ];
-      textBottom = [
-        <br />,
-        "o",
-        "c",
-        "h",
-        ";",
-        "V",
-        "ä",
-        "l",
-        "k",
-        "o",
-        "m",
-        "m",
-        "e",
-        "n",
-        ";",
-        "t",
-        "i",
-        "l",
-        "l",
-        ";",
-        "M",
-        "i",
-        "n",
-        ";",
-        "P",
-        "o",
-        "r",
-        "t",
-        "f",
-        "o",
-        "l",
-        "i",
-        "o",
-        ".",
-      ];
+      const text = retrieveText("SE");
+      textTop = text.textTop;
+      textBottom = text.textBottom;
     }
     if (animationDone === false) {
       setTextMarkerAnimation(
