@@ -1,8 +1,8 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
-import WelcomeAnimation from "./WelcomeAnimation";
+import TextAnimation from "./TextAnimation";
 import { useRecoilValue } from "recoil";
 import { language } from "../../Recoil/language/atom";
-import MeAnimation from "./MeAnimation";
+import GifAnimation from "./GifAnimation";
 
 function Home() {
   const languageToggle = useRecoilValue(language);
@@ -10,7 +10,7 @@ function Home() {
   return (
     <Flex>
       <Flex w="55%" direction="column" justifyContent="space-between">
-        <WelcomeAnimation />
+        <TextAnimation />
         <Box p="70px 0 70px 0" color="white" bg="#414141">
           {languageToggle === "GB" ? (
             <Text ml="200px">
@@ -24,7 +24,7 @@ function Home() {
           )}
         </Box>
       </Flex>
-      <MeAnimation />
+      <GifAnimation />
     </Flex>
   );
 }

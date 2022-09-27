@@ -36,6 +36,10 @@ function Header() {
   }
 
   useEffect(() => {
+    handleFlagClicked(languageToggle);
+  }, []);
+
+  useEffect(() => {
     function handleClickOutside(event) {
       if (refNav.current && !refNav.current.contains(event.target)) {
         setIsOpen(false);
@@ -47,18 +51,19 @@ function Header() {
   }, [refNav]);
 
   function handleFlagClicked(flag) {
-    if (flag === "SE") {
-      setLanguageToggle("SE");
-      setGrayFlagGB("grayscale(100%)");
-      setGrayFlagSE("");
-      setFlagDisabledSE(true);
-      setFlagDisabledGB(false);
-    } else {
+    localStorage.setItem("language", JSON.stringify({ language: flag }));
+    if (flag === "GB") {
       setLanguageToggle("GB");
       setGrayFlagGB("");
       setGrayFlagSE("grayscale(100%)");
       setFlagDisabledSE(false);
       setFlagDisabledGB(true);
+    } else {
+      setLanguageToggle("SE");
+      setGrayFlagGB("grayscale(100%)");
+      setGrayFlagSE("");
+      setFlagDisabledSE(true);
+      setFlagDisabledGB(false);
     }
   }
 

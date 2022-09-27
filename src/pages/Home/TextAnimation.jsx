@@ -22,7 +22,7 @@ const item = {
   },
 };
 
-function WelcomeAnimation() {
+function TextAnimation() {
   const [typingAnimationTop, setTypingAnimationTop] = useState();
   const [typingAnimationBottom, setTypingAnimationBottom] = useState();
   const [animationDone, setAnimationDone] = useRecoilState(homeAnimation);
@@ -31,6 +31,144 @@ function WelcomeAnimation() {
 
   useEffect(() => {
     setAnimationDone(true);
+    let textTop = [];
+    let textBottom = [];
+    let timer1 = "2400";
+    let timer2 = "";
+    let timer3 = "";
+    if (languageToggle === "GB") {
+      timer2 = "10000";
+      timer3 = "19400";
+      textTop = [
+        "H",
+        "e",
+        "l",
+        "l",
+        "o",
+        "!",
+        "-",
+        "I",
+        "-",
+        "A",
+        "m",
+        <br />,
+        "T",
+        "i",
+        "m",
+        "o",
+        "t",
+        "h",
+        "y",
+        "-",
+        "M",
+        "a",
+        "g",
+        "e",
+        "e",
+        ",",
+      ];
+      textBottom = [
+        <br />,
+        "a",
+        "n",
+        "d",
+        ";",
+        "W",
+        "e",
+        "l",
+        "c",
+        "o",
+        "m",
+        "e",
+        ";",
+        "t",
+        "o",
+        ";",
+        "M",
+        "y",
+        ";",
+        "P",
+        "o",
+        "r",
+        "t",
+        "f",
+        "o",
+        "l",
+        "i",
+        "o",
+        ".",
+      ];
+    } else {
+      timer2 = "11000";
+      timer3 = "21500";
+      textTop = [
+        "H",
+        "e",
+        "j",
+        "!",
+        "-",
+        "J",
+        "a",
+        "g",
+        "-",
+        "H",
+        "e",
+        "t",
+        "e",
+        "r",
+        <br />,
+        "T",
+        "i",
+        "m",
+        "o",
+        "t",
+        "h",
+        "y",
+        "-",
+        "M",
+        "a",
+        "g",
+        "e",
+        "e",
+        ",",
+      ];
+      textBottom = [
+        <br />,
+        "o",
+        "c",
+        "h",
+        ";",
+        "V",
+        "ä",
+        "l",
+        "k",
+        "o",
+        "m",
+        "m",
+        "e",
+        "n",
+        ";",
+        "t",
+        "i",
+        "l",
+        "l",
+        ";",
+        "M",
+        "i",
+        "n",
+        ";",
+        "P",
+        "o",
+        "r",
+        "t",
+        "f",
+        "o",
+        "l",
+        "i",
+        "o",
+        ".",
+      ];
+    }
     if (animationDone === false) {
       setTextMarkerAnimation(
         <motion.span
@@ -45,7 +183,7 @@ function WelcomeAnimation() {
           }}
         ></motion.span>
       );
-      setTimeout(() => {
+      const firstTimer = setTimeout(() => {
         setTextMarkerAnimation(
           <motion.span
             animate={{ opacity: 1 }}
@@ -61,34 +199,7 @@ function WelcomeAnimation() {
         );
         setTypingAnimationTop(
           <motion.div variants={container} initial="hidden" animate="visible">
-            {[
-              "H",
-              "e",
-              "l",
-              "l",
-              "o",
-              "!",
-              "-",
-              "I",
-              "-",
-              "A",
-              "m",
-              <br />,
-              "T",
-              "i",
-              "m",
-              "o",
-              "t",
-              "h",
-              "y",
-              "-",
-              "M",
-              "a",
-              "g",
-              "e",
-              "e",
-              ",",
-            ].map((letters, index) => {
+            {textTop.map((letters, index) => {
               if (letters === "-") {
                 return (
                   <motion.span
@@ -113,8 +224,8 @@ function WelcomeAnimation() {
             })}
           </motion.div>
         );
-      }, "2400");
-      setTimeout(() => {
+      }, timer1);
+      const secondTimer = setTimeout(() => {
         setTextMarkerAnimation(
           <motion.span
             animate={{ opacity: 1 }}
@@ -129,55 +240,9 @@ function WelcomeAnimation() {
             }}
           ></motion.span>
         );
-        setTimeout(() => {
-          setTextMarkerAnimation(
-            <motion.span
-              animate={{ opacity: [0, 0, 1, 1] }}
-              transition={{
-                repeat: Infinity,
-                repeatDelay: 0.22,
-              }}
-              style={{
-                fontSize: "18px",
-                display: "inline",
-                borderLeft: "2px solid",
-              }}
-            ></motion.span>
-          );
-        }, "9400");
         setTypingAnimationBottom(
           <motion.div variants={container} initial="hidden" animate="visible">
-            {[
-              <br />,
-              "a",
-              "n",
-              "d",
-              ";",
-              "W",
-              "e",
-              "l",
-              "c",
-              "o",
-              "m",
-              "e",
-              ";",
-              "t",
-              "o",
-              ";",
-              "M",
-              "y",
-              ";",
-              "P",
-              "o",
-              "r",
-              "t",
-              "f",
-              "o",
-              "l",
-              "i",
-              "o",
-              ".",
-            ].map((letters, index) => {
+            {textBottom.map((letters, index) => {
               if (letters === ";") {
                 return (
                   <motion.span
@@ -207,23 +272,46 @@ function WelcomeAnimation() {
             })}
           </motion.div>
         );
-      }, "10000");
+      }, timer2);
+      const thirdTimer = setTimeout(() => {
+        setTextMarkerAnimation(
+          <motion.span
+            animate={{ opacity: [0, 0, 1, 1] }}
+            transition={{
+              repeat: Infinity,
+              repeatDelay: 0.22,
+            }}
+            style={{
+              fontSize: "18px",
+              display: "inline",
+              borderLeft: "2px solid",
+            }}
+          ></motion.span>
+        );
+      }, timer3);
+      return () => {
+        clearTimeout(firstTimer);
+        clearTimeout(secondTimer);
+        clearTimeout(thirdTimer);
+      };
     } else {
       setTypingAnimationTop(
         <Text fontSize="36px">
-          Hello! I Am
+          {languageToggle === "GB" ? "Hello! I Am" : "Hej! Jag Heter"}
           <br />
           Timothy Magee,
         </Text>
       );
       setTypingAnimationBottom(
         <Text fontSize="18px" mt="24px">
-          and Welcome to My Portfolio.
+          {languageToggle === "GB"
+            ? "and Welcome to My Portfolio."
+            : "och Välkommen till Min Portfolio."}
         </Text>
       );
       setTextMarkerAnimation(<Text display="none" />);
     }
-  }, []);
+  }, [languageToggle]);
 
   return (
     <Box
@@ -234,15 +322,11 @@ function WelcomeAnimation() {
       fontSize="4xl"
       fontWeight="bold"
     >
-      {languageToggle === "GB"
-        ? typingAnimationTop
-        : "Animation under utveckling."}
-      {languageToggle === "GB"
-        ? typingAnimationBottom
-        : "Animation under utveckling."}
-      {languageToggle === "GB" ? textMarkerAnimation : ""}
+      {typingAnimationTop}
+      {typingAnimationBottom}
+      {textMarkerAnimation}
     </Box>
   );
 }
 
-export default WelcomeAnimation;
+export default TextAnimation;
