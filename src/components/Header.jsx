@@ -163,7 +163,6 @@ function Header() {
                     p="20px 20px 40px 0"
                     bg={bg}
                     display="block"
-                    textAlign="left"
                   >
                     {languageToggle === "GB" ? "Home" : "Hem"}
                   </Button>
@@ -176,7 +175,6 @@ function Header() {
                     p="20px 20px 40px 0"
                     bg={bg}
                     display="block"
-                    textAlign="left"
                   >
                     {languageToggle === "GB" ? "About" : "Om mig"}
                   </Button>
@@ -189,7 +187,6 @@ function Header() {
                     p="20px 20px 40px 0"
                     bg={bg}
                     display="block"
-                    textAlign="left"
                   >
                     {languageToggle === "GB" ? "Projects" : "Projekt"}
                   </Button>
@@ -202,7 +199,6 @@ function Header() {
                     p="20px 20px 40px 0"
                     bg={bg}
                     display="block"
-                    textAlign="left"
                   >
                     {languageToggle === "GB" ? "Uses" : "Verktyg"}
                   </Button>
