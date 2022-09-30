@@ -30,7 +30,9 @@ function Header() {
   const [grayFlagGB, setGrayFlagGB] = useState();
   const [flagDisabledSE, setFlagDisabledSE] = useState(false);
   const [flagDisabledGB, setFlagDisabledGB] = useState(true);
-  const [isLargerThan1340] = useMediaQuery("(min-width: 1340px)");
+  const [isLargerThan1350] = useMediaQuery("(min-width: 1350px)");
+  const [isLargerThan1000] = useMediaQuery("(min-width: 1000px)");
+  const [isLargerThan788] = useMediaQuery("(min-width: 788px)");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("white", "#303030");
@@ -62,21 +64,30 @@ function Header() {
 
   return (
     <Flex
-      justify="space-between"
+      maxWidth="1350px"
+      flex={1}
+      justifyContent="space-between"
       align="center"
-      p="30px 0 30px 0"
-      m="0 80px 0 80px"
+      p={
+        isLargerThan1000
+          ? "30px 0 30px 80px"
+          : isLargerThan788
+          ? "30px 35px 30px 80px"
+          : "30px 35px 30px 35px"
+      }
+      borderBottom={!isLargerThan788 && "solid 1px"}
     >
-      {isLargerThan1340 ? (
+      {isLargerThan1350 ? (
         <Link w="300px" fontSize="xl" as={ReachLink} to="/">
           {languageToggle === "GB" ? "My Portfolio" : "Min Portfolio"}
         </Link>
       ) : (
-        <Link fontSize="xl" as={ReachLink} to="/">
+        <Link w="150px" fontSize="xl" as={ReachLink} to="/">
           {languageToggle === "GB" ? "My Portfolio" : "Min Portfolio"}
         </Link>
       )}
-      {isLargerThan1340 ? (
+
+      {isLargerThan1000 ? (
         <>
           <Box>
             <Link mr={7} as={ReachLink} to="/">
@@ -156,8 +167,8 @@ function Header() {
               <DrawerBody p="0" pl="48px">
                 <Link as={ReachLink} to="/">
                   <Button
-                    _hover={bg}
-                    _active={bg}
+                    _hover={{ bg }}
+                    _active={{ bg }}
                     onClick={onClose}
                     mt="10px"
                     p="20px 20px 40px 0"
@@ -169,8 +180,8 @@ function Header() {
                 </Link>
                 <Link as={ReachLink} to="/About">
                   <Button
-                    _hover={bg}
-                    _active={bg}
+                    _hover={{ bg }}
+                    _active={{ bg }}
                     onClick={onClose}
                     p="20px 20px 40px 0"
                     bg={bg}
@@ -181,8 +192,8 @@ function Header() {
                 </Link>
                 <Link as={ReachLink} to="/Projects">
                   <Button
-                    _hover={bg}
-                    _active={bg}
+                    _hover={{ bg }}
+                    _active={{ bg }}
                     onClick={onClose}
                     p="20px 20px 40px 0"
                     bg={bg}
@@ -193,8 +204,8 @@ function Header() {
                 </Link>
                 <Link as={ReachLink} to="/Uses">
                   <Button
-                    _hover={bg}
-                    _active={bg}
+                    _hover={{ bg }}
+                    _active={{ bg }}
                     onClick={onClose}
                     p="20px 20px 40px 0"
                     bg={bg}
@@ -205,8 +216,8 @@ function Header() {
                 </Link>
                 <Link as={ReachLink} to="/Contact">
                   <Button
-                    _hover={bg}
-                    _active={bg}
+                    _hover={{ bg }}
+                    _active={{ bg }}
                     onClick={onClose}
                     p="20px 20px 40px 0"
                     bg={bg}
@@ -216,8 +227,8 @@ function Header() {
                   </Button>
                 </Link>
                 <Button
-                  _active={bg}
                   _hover={{ textDecoration: "underline" }}
+                  _active={{ bg }}
                   p="20px 20px 40px 0"
                   bg={bg}
                   display="block"

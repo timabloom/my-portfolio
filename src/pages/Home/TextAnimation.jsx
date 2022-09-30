@@ -1,10 +1,11 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, useMediaQuery } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { default as retrieveText } from "../../data/textAnimation";
 import { homeAnimation } from "../../Recoil/homeAnimation/atom";
 import { language } from "../../Recoil/language/atom";
+import MediaQuery from "react-responsive";
 
 const container = {
   hidden: { display: "inline" },
@@ -29,6 +30,8 @@ function TextAnimation() {
   const [animationDone, setAnimationDone] = useRecoilState(homeAnimation);
   const languageToggle = useRecoilValue(language);
   const [textMarkerAnimation, setTextMarkerAnimation] = useState();
+  const [isLargrThan1350] = useMediaQuery("(max-width: 1350px)");
+  const [isLargerThan788] = useMediaQuery("(min-width: 788px)");
 
   useEffect(() => {
     let textTop = [];
@@ -58,6 +61,7 @@ function TextAnimation() {
             repeatDelay: 0.22,
           }}
           style={{
+            fontSize: "60px",
             display: "inline",
             borderLeft: "3px solid",
           }}
@@ -72,6 +76,7 @@ function TextAnimation() {
               repeatDelay: 0,
             }}
             style={{
+              fontSize: "60px",
               display: "inline",
               borderLeft: "3px solid",
             }}
@@ -85,7 +90,7 @@ function TextAnimation() {
                   <motion.span
                     key={index}
                     variants={item}
-                    style={{ fontSize: "36px", opacity: 0 }}
+                    style={{ fontSize: "60px", opacity: 0 }}
                   >
                     {letters}
                   </motion.span>
@@ -95,7 +100,7 @@ function TextAnimation() {
                   <motion.span
                     key={index}
                     variants={item}
-                    style={{ fontSize: "36px" }}
+                    style={{ fontSize: "60px" }}
                   >
                     {letters}
                   </motion.span>
@@ -114,7 +119,6 @@ function TextAnimation() {
               repeatDelay: 0,
             }}
             style={{
-              fontSize: "18px",
               display: "inline",
               borderLeft: "2px solid",
             }}
@@ -129,7 +133,6 @@ function TextAnimation() {
                     key={index}
                     variants={item}
                     style={{
-                      fontSize: "18px",
                       opacity: 0,
                     }}
                   >
@@ -138,13 +141,7 @@ function TextAnimation() {
                 );
               } else {
                 return (
-                  <motion.span
-                    key={index}
-                    variants={item}
-                    style={{
-                      fontSize: "18px",
-                    }}
-                  >
+                  <motion.span key={index} variants={item} style={{}}>
                     {letters}
                   </motion.span>
                 );
@@ -162,7 +159,6 @@ function TextAnimation() {
               repeatDelay: 0.22,
             }}
             style={{
-              fontSize: "18px",
               display: "inline",
               borderLeft: "2px solid",
             }}
@@ -177,18 +173,40 @@ function TextAnimation() {
       };
     } else {
       setTypingAnimationTop(
-        <Text fontSize="36px">
-          {languageToggle === "GB" ? "Hello! I Am" : "Hej! Jag Heter"}
-          <br />
-          Timothy Magee,
-        </Text>
+        <>
+          <MediaQuery minWidth={1181}>
+            <Text fontSize="6xl">
+              {languageToggle === "GB" ? "Hello! I Am" : "Hej! Jag Heter"}
+              <br />
+              Timothy Magee,
+            </Text>
+          </MediaQuery>
+          <MediaQuery maxWidth={1180}>
+            <Text fontSize="5vw">
+              {languageToggle === "GB" ? "Hello! I Am" : "Hej! Jag Heter"}
+              <br />
+              Timothy Magee,
+            </Text>
+          </MediaQuery>
+        </>
       );
       setTypingAnimationBottom(
-        <Text fontSize="18px" mt="24px">
-          {languageToggle === "GB"
-            ? "and Welcome to My Portfolio."
-            : "och Välkommen till Min Portfolio."}
-        </Text>
+        <>
+          <MediaQuery minWidth={1181}>
+            <Text fontWeight="medium" mt="24px">
+              {languageToggle === "GB"
+                ? "and Welcome to My Portfolio."
+                : "och Välkommen till Min Portfolio."}
+            </Text>
+          </MediaQuery>
+          <MediaQuery maxWidth={1180}>
+            <Text fontSize="3vw" fontWeight="medium" mt="24px">
+              {languageToggle === "GB"
+                ? "and Welcome to My Portfolio."
+                : "och Välkommen till Min Portfolio."}
+            </Text>
+          </MediaQuery>
+        </>
       );
       setTextMarkerAnimation(<Text display="none" />);
     }
@@ -196,12 +214,11 @@ function TextAnimation() {
 
   return (
     <Box
-      h="300px"
       ml="80px"
-      p="70px 70px 70px 0"
-      borderTop="1px solid"
+      p={isLargrThan1350 ? "6vw 30px 0 0" : "80px 30px 0 0"}
       fontSize="4xl"
       fontWeight="bold"
+      borderTop={isLargerThan788 && "solid 1px"}
     >
       {typingAnimationTop}
       {typingAnimationBottom}

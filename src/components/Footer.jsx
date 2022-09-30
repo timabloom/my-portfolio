@@ -10,7 +10,7 @@ function Footer() {
   const languageToggle = useRecoilValue(language);
 
   return (
-    <Flex p="70px" direction="column" alignItems="center">
+    <Flex p="70px 0 70px 0" direction="column" alignItems="center">
       <Box mb={5} color={color}>
         <Link mr={6} href="" _hover={{ color: "#0a66c2" }}>
           <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
