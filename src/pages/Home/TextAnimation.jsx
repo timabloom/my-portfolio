@@ -5,7 +5,7 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { default as retrieveText } from "../../data/textAnimation";
 import { homeAnimation } from "../../Recoil/homeAnimation/atom";
 import { language } from "../../Recoil/language/atom";
-import MediaQuery from "react-responsive";
+import TextNoAnimation from "./TextNoAnimation";
 
 const container = {
   hidden: { display: "inline" },
@@ -172,42 +172,8 @@ function TextAnimation() {
         setAnimationDone(true);
       };
     } else {
-      setTypingAnimationTop(
-        <>
-          <MediaQuery minWidth={1181}>
-            <Text fontSize="6xl">
-              {languageToggle === "GB" ? "Hello! I Am" : "Hej! Jag Heter"}
-              <br />
-              Timothy Magee,
-            </Text>
-          </MediaQuery>
-          <MediaQuery maxWidth={1180}>
-            <Text fontSize="5vw">
-              {languageToggle === "GB" ? "Hello! I Am" : "Hej! Jag Heter"}
-              <br />
-              Timothy Magee,
-            </Text>
-          </MediaQuery>
-        </>
-      );
-      setTypingAnimationBottom(
-        <>
-          <MediaQuery minWidth={1181}>
-            <Text fontWeight="medium" mt="24px">
-              {languageToggle === "GB"
-                ? "and Welcome to My Portfolio."
-                : "och Välkommen till Min Portfolio."}
-            </Text>
-          </MediaQuery>
-          <MediaQuery maxWidth={1180}>
-            <Text fontSize="3vw" fontWeight="medium" mt="24px">
-              {languageToggle === "GB"
-                ? "and Welcome to My Portfolio."
-                : "och Välkommen till Min Portfolio."}
-            </Text>
-          </MediaQuery>
-        </>
-      );
+      setTypingAnimationTop(<TextNoAnimation placement="top" />);
+      setTypingAnimationBottom(<TextNoAnimation placement="Bottom" />);
       setTextMarkerAnimation(<Text display="none" />);
     }
   }, [languageToggle]);
