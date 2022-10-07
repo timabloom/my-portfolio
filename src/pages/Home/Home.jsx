@@ -19,7 +19,7 @@ function Home() {
   const [isLargrThan1350] = useMediaQuery("(max-width: 1350px)");
 
   return (
-    <Flex maxWidth="1350px">
+    <Flex maxWidth="1500px">
       <Flex
         w={!isSmallerThan644 && "55%"}
         direction="column"

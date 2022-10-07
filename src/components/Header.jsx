@@ -64,7 +64,7 @@ function Header() {
 
   return (
     <Flex
-      maxWidth="1350px"
+      maxWidth="1500px"
       flex={1}
       justifyContent="space-between"
       align="center"
