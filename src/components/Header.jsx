@@ -70,7 +70,7 @@ function Header() {
       p={desktopMenu ? "30px 0 30px 0px" : "30px 35px 30px 35px"}
       borderBottom="solid 1px"
     >
-      <Link w="220px" fontSize="xl" as={ReachLink} to="/">
+      <Link _hover={{ textDecor: "none" }} w="220px" fontSize="xl" as={ReachLink} to="/">
         {languageToggle === "GB" ? "My Portfolio" : "Min Portfolio"}
       </Link>
       {desktopMenu ? (

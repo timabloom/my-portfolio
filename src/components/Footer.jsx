@@ -12,7 +12,11 @@ function Footer() {
   return (
     <Flex p="70px 0 70px 0" direction="column" alignItems="center">
       <Box mb={5} color={color}>
-        <Link mr={6} href="" _hover={{ color: "#0a66c2" }}>
+        <Link
+          mr={6}
+          href="https://www.linkedin.com/in/timothy-magee-b3170424a"
+          _hover={{ color: "#0a66c2" }}
+        >
           <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
         </Link>
         <Link
@@ -22,9 +26,9 @@ function Footer() {
         >
           <FontAwesomeIcon icon={faGithub} size="2x" fixedWidth />
         </Link>
-        <Link href="" _hover={{ color: "#ffd43b" }}>
+        <Link href="mailto:timabloom@proton.me" _hover={{ color: "#ffd43b" }}>
           <FontAwesomeIcon icon={faEnvelope} size="2x" fixedWidth />
-        </Link>
+        </Link> 
       </Box>
       <Text>
         {languageToggle === "GB"

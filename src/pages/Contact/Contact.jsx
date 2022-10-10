@@ -27,8 +27,8 @@ function Contact() {
 
   return (
     <Box>
-      <Heading m="50px 0 0 0" align="center">
-        Contact
+      <Heading m="50px 0 30px 0" align="center">
+        Contact Form
       </Heading>
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
@@ -44,7 +44,7 @@ function Contact() {
           animate={formShake}
           transition={{ duration: 0.3 }}
         >
-          <Box bg="#414141" p="30px" mt="50px">
+          <Box bg="#414141" p="30px">
             <FormControl isDisabled>
               <FormLabel>Email *</FormLabel>
               <Input type="email" mb="20px" />

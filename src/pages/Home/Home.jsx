@@ -5,14 +5,16 @@ import {
   useMediaQuery,
   Stack,
   Badge,
-  IconButton,
+  Button,
+  Link,
 } from "@chakra-ui/react";
 import TextAnimation from "./TextAnimation";
 import { useRecoilValue } from "recoil";
 import { language } from "../../Recoil/language/atom";
 import GifAnimation from "./GifAnimation";
-import { ArrowDownIcon } from "@chakra-ui/icons";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
+import { Link as ReachLink } from "react-router-dom";
 
 function Home() {
   const languageToggle = useRecoilValue(language);
@@ -75,14 +77,12 @@ function Home() {
                 </Text>
               )}
               <Flex flexDirection="column" ml="30px" mr="50px">
-                <Text align="center" w="80px">
-                  About Me
-                </Text>
-                <IconButton
-                  fontSize="2xl"
-                  aria-label="To about me"
-                  icon={<ArrowDownIcon />}
-                />
+                <Link _hover={{textDecor: "none"}} mr={7} as={ReachLink} to="/Projects">
+                  <Button aria-label="To about me">
+                    Proejcts
+                    <ArrowForwardIcon ml="7px" />
+                  </Button>
+                </Link>
               </Flex>
             </Flex>
           </Box>
