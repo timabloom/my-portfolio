@@ -30,9 +30,7 @@ function Header() {
   const [grayFlagGB, setGrayFlagGB] = useState();
   const [flagDisabledSE, setFlagDisabledSE] = useState(false);
   const [flagDisabledGB, setFlagDisabledGB] = useState(true);
-  const [isLargerThan1350] = useMediaQuery("(min-width: 1350px)");
-  const [isLargerThan1000] = useMediaQuery("(min-width: 1000px)");
-  const [isLargerThan788] = useMediaQuery("(min-width: 788px)");
+  const [desktopMenu] = useMediaQuery("(min-width: 1000px)");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("white", "#303030");
@@ -64,30 +62,18 @@ function Header() {
 
   return (
     <Flex
-      maxWidth="1500px"
+      maxWidth="1420px"
       flex={1}
       justifyContent="space-between"
       align="center"
-      p={
-        isLargerThan1000
-          ? "30px 0 30px 80px"
-          : isLargerThan788
-          ? "30px 35px 30px 80px"
-          : "30px 35px 30px 35px"
-      }
-      borderBottom={!isLargerThan788 && "solid 1px"}
+      ml={desktopMenu ? "80px" : "0"}
+      p={desktopMenu ? "30px 0 30px 0px" : "30px 35px 30px 35px"}
+      borderBottom="solid 1px"
     >
-      {isLargerThan1350 ? (
-        <Link w="300px" fontSize="xl" as={ReachLink} to="/">
-          {languageToggle === "GB" ? "My Portfolio" : "Min Portfolio"}
-        </Link>
-      ) : (
-        <Link w="150px" fontSize="xl" as={ReachLink} to="/">
-          {languageToggle === "GB" ? "My Portfolio" : "Min Portfolio"}
-        </Link>
-      )}
-
-      {isLargerThan1000 ? (
+      <Link w="220px" fontSize="xl" as={ReachLink} to="/">
+        {languageToggle === "GB" ? "My Portfolio" : "Min Portfolio"}
+      </Link>
+      {desktopMenu ? (
         <>
           <Box>
             <Link mr={7} as={ReachLink} to="/">

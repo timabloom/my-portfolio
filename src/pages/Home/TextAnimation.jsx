@@ -31,7 +31,6 @@ function TextAnimation() {
   const languageToggle = useRecoilValue(language);
   const [textMarkerAnimation, setTextMarkerAnimation] = useState();
   const [isLargrThan1350] = useMediaQuery("(max-width: 1350px)");
-  const [isLargerThan788] = useMediaQuery("(min-width: 788px)");
 
   useEffect(() => {
     let textTop = [];
@@ -184,7 +183,6 @@ function TextAnimation() {
       p={isLargrThan1350 ? "6vw 30px 0 0" : "80px 30px 0 0"}
       fontSize="4xl"
       fontWeight="bold"
-      borderTop={isLargerThan788 && "solid 1px"}
     >
       {typingAnimationTop}
       {typingAnimationBottom}

@@ -1,4 +1,4 @@
-import { Box, Image, useMediaQuery, Text, Flex } from "@chakra-ui/react";
+import { Box, Image, Text, Flex } from "@chakra-ui/react";
 import typingGif from "../../assets/typing.gif";
 import wavingGif from "../../assets/waving.gif";
 import { useEffect, useState } from "react";
@@ -10,7 +10,6 @@ function GifAnimation() {
   const [gifAnimation, setMeAnimation] = useState();
   const animationDone = useRecoilValue(homeAnimation);
   const languageToggle = useRecoilValue(language);
-  const [isSmallerThan644] = useMediaQuery("(max-width: 1000px)");
 
   useEffect(() => {
     let count1 = "";
@@ -40,7 +39,7 @@ function GifAnimation() {
   }, [languageToggle]);
 
   return (
-    <Box w="45%" borderTop={!isSmallerThan644 && "solid 1px"}>
+    <Box w="45%">
       <Image
         alt="Animation of me typing on a keyboard"
         src={gifAnimation}

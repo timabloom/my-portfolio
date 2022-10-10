@@ -7,7 +7,7 @@ import { default as retrieveText } from "../../data/projectInfo";
 function Projects() {
   const languageToggle = useRecoilValue(language);
   return (
-    <Flex ml="80px" direction="column" borderTop="1px solid">
+    <Flex ml="80px" direction="column">
       <Heading m="50px 0 0 0">Projects</Heading>
       <Project duration={1} project={retrieveText(languageToggle, 1)} />
       <Project duration={1.1} project={retrieveText(languageToggle, 2)} />
