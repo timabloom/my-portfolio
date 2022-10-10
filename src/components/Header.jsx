@@ -99,9 +99,6 @@ function Header() {
             <Link mr={7} as={ReachLink} to="/Projects">
               {languageToggle === "GB" ? "Projects" : "Projekt"}
             </Link>
-            <Link mr={7} as={ReachLink} to="/Uses">
-              {languageToggle === "GB" ? "Uses" : "Verktyg"}
-            </Link>
             <Link as={ReachLink} to="/Contact">
               {languageToggle === "GB" ? "Contact" : "Kontakt"}
             </Link>
@@ -200,18 +197,6 @@ function Header() {
                     display="block"
                   >
                     {languageToggle === "GB" ? "Projects" : "Projekt"}
-                  </Button>
-                </Link>
-                <Link as={ReachLink} to="/Uses">
-                  <Button
-                    _hover={{ bg }}
-                    _active={{ bg }}
-                    onClick={onClose}
-                    p="20px 20px 40px 0"
-                    bg={bg}
-                    display="block"
-                  >
-                    {languageToggle === "GB" ? "Uses" : "Verktyg"}
                   </Button>
                 </Link>
                 <Link as={ReachLink} to="/Contact">
