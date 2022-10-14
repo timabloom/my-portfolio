@@ -30,7 +30,7 @@ function Header() {
   const [grayFlagGB, setGrayFlagGB] = useState();
   const [flagDisabledSE, setFlagDisabledSE] = useState(false);
   const [flagDisabledGB, setFlagDisabledGB] = useState(true);
-  const [desktopMenu] = useMediaQuery("(min-width: 1000px)");
+  const [tabletSize] = useMediaQuery("(min-width: 1080px)");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("white", "#303030");
@@ -66,14 +66,14 @@ function Header() {
       flex={1}
       justifyContent="space-between"
       align="center"
-      ml={desktopMenu ? "80px" : "0"}
-      p={desktopMenu ? "30px 0 30px 0px" : "30px 35px 30px 35px"}
+      ml={tabletSize ? "80px" : "0"}
+      p={tabletSize ? "30px 0 30px 0px" : "30px 35px 30px 35px"}
       borderBottom="solid 1px"
     >
       <Link _hover={{ textDecor: "none" }} w="220px" fontSize="xl" as={ReachLink} to="/">
         {languageToggle === "GB" ? "My Portfolio" : "Min Portfolio"}
       </Link>
-      {desktopMenu ? (
+      {tabletSize ? (
         <>
           <Box>
             <Link mr={7} as={ReachLink} to="/">

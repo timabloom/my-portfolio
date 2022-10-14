@@ -1,4 +1,4 @@
-import { Box, Image, Text, Flex } from "@chakra-ui/react";
+import { Box, Image, Text, Flex, useMediaQuery } from "@chakra-ui/react";
 import typingGif from "../../assets/typing.gif";
 import wavingGif from "../../assets/waving.gif";
 import { useEffect, useState } from "react";
@@ -10,6 +10,7 @@ function GifAnimation() {
   const [gifAnimation, setMeAnimation] = useState();
   const animationDone = useRecoilValue(homeAnimation);
   const languageToggle = useRecoilValue(language);
+  const [laptopSize] = useMediaQuery("(min-width: 1080px)");
 
   useEffect(() => {
     let count1 = "";
@@ -45,9 +46,13 @@ function GifAnimation() {
         src={gifAnimation}
       ></Image>
       <Flex justifyContent="flex-end">
-        <Text pos="absolute" m="5px">
-          {languageToggle === "GB" ? "Last updated: 13-10-2022" : "Senast uppdaterad: 13-10-2022"}
-        </Text>
+        {laptopSize && (
+          <Text pos="absolute" m="5px">
+            {languageToggle === "GB"
+              ? "Last updated: 13-10-2022"
+              : "Senast uppdaterad: 13-10-2022"}
+          </Text>
+        )}
       </Flex>
     </Box>
   );

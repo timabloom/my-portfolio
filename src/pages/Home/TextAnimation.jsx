@@ -30,7 +30,8 @@ function TextAnimation() {
   const [animationDone, setAnimationDone] = useRecoilState(homeAnimation);
   const languageToggle = useRecoilValue(language);
   const [textMarkerAnimation, setTextMarkerAnimation] = useState();
-  const [isLargrThan1350] = useMediaQuery("(max-width: 1350px)");
+  const [desktopSize] = useMediaQuery("(min-width: 1500px)");
+  const [laptopSize] = useMediaQuery("(min-width: 1080px)");
 
   useEffect(() => {
     let textTop = [];
@@ -179,8 +180,8 @@ function TextAnimation() {
 
   return (
     <Box
-      ml="80px"
-      p={isLargrThan1350 ? "6vw 30px 0 0" : "80px 30px 0 0"}
+      ml={laptopSize ? "80px" : "6vw"}
+      pt={laptopSize ? "80px" : "6vw"}
       fontSize="4xl"
       fontWeight="bold"
     >
