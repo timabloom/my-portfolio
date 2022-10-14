@@ -42,12 +42,12 @@ function Footer() {
           <Text>Copyright © 2022 Timothy Magee</Text>
           <Link
             rel="license"
-            href="http://creativecommons.org/licenses/by-sa/4.0/"
+            href="https://creativecommons.org/licenses/by-nd/4.0/"
           >
             <Image
               m="7px"
               alt="Creative Commons Licence"
-              src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+              src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png"
             />
           </Link>
           <Text>
@@ -55,9 +55,10 @@ function Footer() {
             <Link
               color="cyan.400"
               rel="license"
-              href="http://creativecommons.org/licenses/by-sa/4.0/"
+              href="https://creativecommons.org/licenses/by-nd/4.0/"
             >
-              Creative Commons Attribution-ShareAlike 4.0 International License.
+              Creative Commons Attribution-NoDerivatives 4.0 International
+              License.
             </Link>
           </Text>
           <Text>
@@ -73,14 +74,15 @@ function Footer() {
         </Box>
       ) : (
         <Box align="center">
+          <Text>Copyright © 2022 Timothy Magee</Text>
           <Link
             rel="license"
-            href="https://creativecommons.org/licenses/by-sa/4.0/deed.sv/"
+            href="https://creativecommons.org/licenses/by-nd/4.0/deed.sv"
           >
             <Image
-              mb="7px"
+              m="7px"
               alt="Creative Commons Licence"
-              src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+              src="https://i.creativecommons.org/l/by-nd/4.0/80x15.png"
             />
           </Link>
           <Text>
@@ -88,9 +90,10 @@ function Footer() {
             <Link
               color="cyan.400"
               rel="license"
-              href="https://creativecommons.org/licenses/by-sa/4.0/deed.sv/"
+              href="https://creativecommons.org/licenses/by-nd/4.0/deed.sv"
             >
-              Creative Commons Erkännande-DelaLika 4.0 Internationell Licens.
+              Creative Commons Erkännande-IngaBearbetningar 4.0 Internationell
+              Licens.
             </Link>
           </Text>
           <Text>
