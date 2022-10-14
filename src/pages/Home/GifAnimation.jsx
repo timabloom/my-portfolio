@@ -46,7 +46,7 @@ function GifAnimation() {
       ></Image>
       <Flex justifyContent="flex-end">
         <Text pos="absolute" m="5px">
-          Last updated: 29-09-2022
+          {languageToggle === "GB" ? "Last updated: 13-10-2022" : "Senast uppdaterad: 13-10-2022"}
         </Text>
       </Flex>
     </Box>

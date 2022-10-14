@@ -36,10 +36,11 @@ function Home() {
           <TextAnimation />
           <Box>
             <Text p="20px" pb="1" ml="60px" fontSize="2xl" colorScheme="green">
-              Frontend Programmer:
+              {languageToggle === "GB"
+                ? "Frontend Programmer"
+                : "Frontend-programmerare"}
             </Text>
             <Stack direction="row" p="0 16px 25px 16px" ml="60px">
-              Area of Knowledge:
               <Badge ml="1" fontSize="2xl" colorScheme="green">
                 HTML
               </Badge>
@@ -56,7 +57,7 @@ function Home() {
                 Node
               </Badge>
               <Badge ml="1" fontSize="2xl" colorScheme="purple">
-                SQL
+                Express
               </Badge>
             </Stack>
             <Flex
@@ -67,19 +68,27 @@ function Home() {
             >
               {languageToggle === "GB" ? (
                 <Text fontSize="xl" ml="80px">
-                  This portfolio is my first project outside of school. I hope
-                  you like it. More projects are on their way.
+                  This portfolio is my first project outside of school.
+                  <br />I hope you like it. Other projects i have built can be
+                  found under projects.
                 </Text>
               ) : (
-                <Text ml="80px">
-                  Duis interdum eu ex ac dignissim. Aenean pretium tristique
-                  egestas.
+                <Text fontSize="xl" ml="80px">
+                  Den här portfolion är mitt första projekt utanför skolan.
+                  <br />
+                  Jag hoppas du tycker om den. Andra projekt jag har byggt finns
+                  under projekt.
                 </Text>
               )}
               <Flex flexDirection="column" ml="30px" mr="50px">
-                <Link _hover={{textDecor: "none"}} mr={7} as={ReachLink} to="/Projects">
+                <Link
+                  _hover={{ textDecor: "none" }}
+                  mr={7}
+                  as={ReachLink}
+                  to="/Projects"
+                >
                   <Button aria-label="To about me">
-                    Proejcts
+                    {languageToggle === "GB" ? "Projects" : "Projekt"}
                     <ArrowForwardIcon ml="7px" />
                   </Button>
                 </Link>
