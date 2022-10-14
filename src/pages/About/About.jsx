@@ -62,11 +62,17 @@ function About() {
                 My Tech Stack
               </Text>
               <Text fontSize="xl" p="20px 50px 0 50px">
-                Programing Languages: HTML, CSS, JavaScript
+                Programing Languages: HTML, CSS, JavaScript, SQL
               </Text>
               <Text fontSize="xl" p="20px 50px 0 50px">
-                Libraries and Frameworks: Node.js, React, Express.js, Chakra UI,
-                Motion Framer, Socket.io
+                Version Control Software: Git
+              </Text>
+              <Text fontSize="xl" p="20px 50px 0 50px">
+                JavaScript Runtime Environment: Node.js
+              </Text>
+              <Text fontSize="xl" p="20px 50px 0 50px">
+                Libraries and Frameworks: React, Express.js, Chakra UI, Motion
+                Framer, Socket.io
               </Text>
               <Text fontSize="xl" p="20px 50px 0 50px">
                 Operating Systems: Linux, Windows, Mac, Android, iOS
@@ -92,11 +98,20 @@ function About() {
                 som programmerare är att skapa funktionella program och
                 webbplatser med god användarupplevelse i åtanke.
               </Text>
-              <Text fontSize="xl" p="20px 50px 0 50px">
-                Programmeringsspråk: HTML, CSS, JavaScript
+              <Text fontSize="2xl" p="20px 50px 0 50px">
+                Min teknikstack
               </Text>
               <Text fontSize="xl" p="20px 50px 0 50px">
-                Bibliotek och Ramverk: Node.js, React, Express.js, Chakra UI,
+                Programmeringsspråk: HTML, CSS, JavaScript, SQL
+              </Text>
+              <Text fontSize="xl" p="20px 50px 0 50px">
+                Versionshanteringsprogram: Git
+              </Text>
+              <Text fontSize="xl" p="20px 50px 0 50px">
+                JavaScript runtime-miljö: Node.js
+              </Text>
+              <Text fontSize="xl" p="20px 50px 0 50px">
+                Bibliotek och Ramverk: React, Express.js, Chakra UI,
                 Motion Framer, Socket.io
               </Text>
               <Text fontSize="xl" p="20px 50px 0 50px">
