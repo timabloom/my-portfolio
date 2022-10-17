@@ -46,13 +46,13 @@ function Home() {
             >
               {languageToggle === "GB" ? (
                 <Text fontSize="xl" ml="80px">
-                  This portfolio is my first project outside of school. I hope
-                  you like it. Other projects i have built can be found under
+                  This portfolio is my first larger project outside of school. I hope
+                  you like it. Other projects I have built can be found under
                   projects.
                 </Text>
               ) : (
                 <Text fontSize="xl" ml="80px">
-                  Den här portfolion är mitt första projekt utanför skolan. Jag
+                  Den här portfolion är mitt första större projekt utanför skolan. Jag
                   hoppas du tycker om den. Andra projekt jag har byggt finns
                   under projekt.
                 </Text>

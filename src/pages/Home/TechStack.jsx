@@ -64,6 +64,13 @@ function TechStack() {
         >
           Express
         </Badge>
+        <Badge
+          ml="1"
+          fontSize={desktopSize ? "2xl" : "1.6vw"}
+          colorScheme="pink"
+        >
+          SQL
+        </Badge>
       </Stack>
     </Box>
   );

@@ -49,13 +49,13 @@ function About() {
             <Flex direction="column" maxW="1120px">
               <Text fontSize="xl" p="0 50px 20px 50px">
                 Hello, My name is Timothy Magee. I am a Frontend Developer from
-                Uppsala, Sweden and I am currently in search of an internship. I
-                am fascinated with how much a programmer can do and all the
-                intricacies that follow. I like to help others and for a long
-                time i thought my role would be as a social worker or something
-                alike but i am more happy as a programmer. Creating websites so
-                that the information is easily obtained is also a good way to
-                help others. My goal as a programmer is to create functional
+                Uppsala, Sweden, and I am currently searching for an internship.
+                I am fascinated with how much a programmer can do and all the
+                intricacies that follow. I like to help others, and for a long
+                time, I thought my role would be as a social worker or something
+                similar, but I am happier as a programmer. Creating websites to
+                obtain information easily is also an excellent way to help
+                others. My goal as a programmer is to develop functional
                 programs and websites with good user experience in mind.
               </Text>
               <Text fontSize="2xl" p="20px 50px 0 50px">
@@ -111,8 +111,8 @@ function About() {
                 JavaScript runtime-miljö: Node.js
               </Text>
               <Text fontSize="xl" p="20px 50px 0 50px">
-                Bibliotek och Ramverk: React, Express.js, Chakra UI,
-                Motion Framer, Socket.io
+                Bibliotek och Ramverk: React, Express.js, Chakra UI, Motion
+                Framer, Socket.io
               </Text>
               <Text fontSize="xl" p="20px 50px 0 50px">
                 Operativsystem: Linux, Windows, Mac, Android, iOS

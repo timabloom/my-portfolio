@@ -76,7 +76,7 @@ function Contact() {
         </Heading>
         <Text>
           {languageToggle === "GB"
-            ? "Contact form currently not working."
+            ? "The contact form is currently not working."
             : "Kontaktformuläret fungerar inte för tillfället."}
         </Text>
         <Text>

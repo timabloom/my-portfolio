@@ -9,7 +9,7 @@ export default function projectInfo(language, project) {
       return {
         heading: "My Portfolio",
         text1:
-          "I have learned a lot from making my own portfolio website. The website has two built-in language options: English and Swedish. I love dark mode so I created such an option for those who like it. I used the Chakra UI library for styling and Framer Motion for animations. I also used Recoil instead of React context.",
+          "I have learned a lot from making my portfolio website. The website has two built-in language options: English and Swedish. I love dark mode, so I created an option for those who like it. I used the Chakra UI library for styling and Framer Motion for animations. I also used Recoil instead of React context.",
         text2:
           "Technologies Used: JavaScript, Node.js, React, Chakra UI, Framer Motion",
         githubLink: "https://github.com/timabloom/my-portfolio",
@@ -19,7 +19,7 @@ export default function projectInfo(language, project) {
       return {
         heading: "Chatty Chatty Bang Bang",
         text1:
-          "Chatty Chatty Bang Bang is a real time chat application built for a course about web servers and databases. The purpose of the assignment was to learn how to create an API using Express. I also connected a database on Heroku to my API. In this app you are able to chat to others by creating a room or joining a room. A room is deleted when no one is occupying the room. As an option you can create a name for yourself, otherwise a random name is given. Emojis and private messages are also possible to send in the rooms.",
+          "Chatty Chatty Bang Bang is a real-time chat application built for a course about web servers and databases. The purpose of the assignment was to learn how to create an API using Express. I also connected a database on Heroku to my API. This app lets you chat with others by creating or joining a room. Rooms are removed when no one is occupying them. As an option, you can create a name for yourself; otherwise, a random name is given. Emojis and private messages are also possible to send in the rooms.",
         text2:
           "Technologies Used: JavaScript, Node.js, React, Chakra UI, Express.js, Socket.io",
         githubLink: "https://github.com/cme-timothy/realtime-chat-klient",
@@ -30,7 +30,7 @@ export default function projectInfo(language, project) {
       return {
         heading: "Cat images in a Heartbeat",
         text1:
-          "Cat images in a heartbeat is a web page made for cat lovers built for a course in JavaScript. This website shows 12 adorable cat images per page fetched from an API. A neat function of this web page is if the user hovers over a cat image then it will enlarge and shrink back to the pacing of a heartbeat.",
+          "Cat images in a Heartbeat is a web page for cat lovers built for a course in JavaScript. This website shows 12 adorable cat images per page fetched from an API. A neat function of this web page is that if the user hovers over a cat image, it will enlarge and shrink back to the pacing of a heartbeat.",
         text2: "Technologies Used: JavaScript, CSS, Node.js",
         githubLink:
           "https://github.com/cme-timothy/cat-images-webpage-assignment",
@@ -41,7 +41,7 @@ export default function projectInfo(language, project) {
       return {
         heading: "American Yahtzee",
         text1:
-          "A Yahtzee game built for a course in JavaScript. I found out through this project that there are different rules for Yahtzee; this game follows the American ruleset. Almost everything in the game is automated; there is no need to count points. You can't cheat in this game either.",
+          "American Yahtzee is a game I built for a course in JavaScript. I found out through this project that there are different rules for Yahtzee; this game follows the American ruleset. Almost everything in the game is automated; there is no need to count points. You can't cheat in this game, either.",
         text2: "Technologies Used: JavaScript, CSS",
         githubLink: "https://github.com/cme-timothy/yatzy-assignment",
         website: "https://american-yahtzee.netlify.app",
