@@ -21,6 +21,7 @@ function Contact() {
   const [clickToggle, setClickToggle] = useState();
   const bg = useColorModeValue("#24242e", "#414141");
   const color = useColorModeValue("white", "white");
+  const colorHeader = useColorModeValue("#373852", "white");
 
   function handleClick() {
     setClickToggle(!clickToggle);
@@ -33,7 +34,7 @@ function Contact() {
 
   return (
     <Box>
-      <Heading m="80px 0 30px 0" align="center">
+      <Heading m="80px 0 30px 0" color={colorHeader} align="center">
         {languageToggle === "GB" ? "Contact form" : "Kontaktformulär"}
       </Heading>
       <motion.div

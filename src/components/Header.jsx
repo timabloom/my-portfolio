@@ -36,6 +36,7 @@ function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("white", "#303030");
+  const color = useColorModeValue("white", "white");
 
   useEffect(() => {
     handleFlagClicked(languageToggle);
@@ -64,18 +65,19 @@ function Header() {
 
   return (
     <Flex
+      fontSize="2xl"
       maxWidth="1420px"
       flex={1}
       justifyContent="space-between"
       align="center"
       ml={tabletSize ? "80px" : "0"}
-      p={tabletSize ? "30px 0 30px 0px" : "30px 35px 30px 35px"}
+      p={tabletSize ? "20px 0 20px 0px" : "20px 25px 20px 25px"}
       borderBottom="solid 1px"
     >
       <Link
         _hover={{ textDecor: "none" }}
         w="220px"
-        fontSize="xl"
+        fontSize="4xl"
         as={ReachLink}
         to="/"
       >
@@ -124,7 +126,7 @@ function Header() {
         <Flex>
           <IconButton
             ml="40px"
-            icon={<HamburgerIcon w="30px" h="30px" />}
+            icon={<HamburgerIcon color={color} w="30px" h="30px" />}
             onClick={onOpen}
           />
           <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
@@ -137,17 +139,18 @@ function Header() {
                 align="center"
                 pr="24px"
               >
-                <DrawerHeader h="100px" p="35px 20px 35px 0">
+                <DrawerHeader fontSize="2xl" h="94px" p="30px 20px 30px 0">
                   {languageToggle === "GB" ? "Menu" : "Meny"}
                 </DrawerHeader>
                 <IconButton
-                  icon={<CloseIcon w="20px" h="20px" />}
+                  icon={<CloseIcon color={color} w="20px" h="20px" />}
                   onClick={onClose}
                 />
               </Flex>
               <DrawerBody p="0" pl="48px">
                 <Link as={ReachLink} to="/">
                   <Button
+                    fontSize="xl"
                     _hover={{ bg }}
                     _active={{ bg }}
                     onClick={onClose}
@@ -161,6 +164,7 @@ function Header() {
                 </Link>
                 <Link as={ReachLink} to="/About">
                   <Button
+                    fontSize="xl"
                     _hover={{ bg }}
                     _active={{ bg }}
                     onClick={onClose}
@@ -173,6 +177,7 @@ function Header() {
                 </Link>
                 <Link as={ReachLink} to="/Projects">
                   <Button
+                    fontSize="xl"
                     _hover={{ bg }}
                     _active={{ bg }}
                     onClick={onClose}
@@ -185,6 +190,7 @@ function Header() {
                 </Link>
                 <Link as={ReachLink} to="/Contact">
                   <Button
+                    fontSize="xl"
                     _hover={{ bg }}
                     _active={{ bg }}
                     onClick={onClose}
@@ -196,6 +202,7 @@ function Header() {
                   </Button>
                 </Link>
                 <Button
+                  fontSize="xl"
                   _hover={{ textDecoration: "underline" }}
                   _active={{ bg }}
                   p="20px 20px 40px 0"
@@ -215,7 +222,7 @@ function Header() {
                 </Button>
               </DrawerBody>
               <DrawerFooter>
-                <DrawerHeader minW="150px">
+                <DrawerHeader minW="150px" fontSize="xl">
                   {languageToggle === "GB" ? "Language:" : "Språk:"}
                 </DrawerHeader>
                 <Tooltip hasArrow label="English">

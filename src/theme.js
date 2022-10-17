@@ -38,7 +38,6 @@ const components = {
     }),
     defaultProps: {
       variants: "solid",
-      colorScheme: "gray",
     },
   },
 };

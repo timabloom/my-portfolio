@@ -1,16 +1,17 @@
-import { IconButton, useColorMode, Flex, Text } from "@chakra-ui/react";
+import {
+  IconButton,
+  useColorMode,
+  Flex,
+} from "@chakra-ui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { useEffect, useState } from "react";
-import { useRecoilValue } from "recoil";
-import { language } from "../Recoil/language/atom";
 
 function DarkMode() {
   const { colorMode, toggleColorMode } = useColorMode();
   const [iconToggle, setIconToggle] = useState();
   const [colorModeClicked, setColorModeClicked] = useState(false);
   const [clickTimer, setClickTimer] = useState(false);
-  const languageToggle = useRecoilValue(language);
 
   useEffect(() => {
     if (
@@ -31,7 +32,7 @@ function DarkMode() {
             }}
             transition={{ duration: 1, delay: 0.1 }}
           >
-            <SunIcon w="25px" h="25px" _hover={{ color: "orange.400" }} />
+            <SunIcon w="35px" h="35px" color="#373852" hover={{ color: "orange.400" }} />
           </motion.div>
         </AnimatePresence>
       );
@@ -53,7 +54,7 @@ function DarkMode() {
             }}
             transition={{ duration: 1, delay: 0.1 }}
           >
-            <MoonIcon w="25px" h="25px" _hover={{ color: "yellow.400" }} />
+            <MoonIcon w="35px" h="35px" _hover={{ color: "yellow.400" }} />
           </motion.div>
         </AnimatePresence>
       );
@@ -76,7 +77,7 @@ function DarkMode() {
             }}
             transition={{ duration: 1, delay: 0.1 }}
           >
-            <MoonIcon w="25px" h="25px" _hover={{ color: "yellow.400" }} />
+            <MoonIcon w="35px" h="35px" _hover={{ color: "yellow.400" }} />
           </motion.div>
         </AnimatePresence>
       );
@@ -99,7 +100,7 @@ function DarkMode() {
             }}
             transition={{ duration: 1, delay: 0.1 }}
           >
-            <SunIcon w="25px" h="25px" _hover={{ color: "orange.400" }} />
+            <SunIcon w="35px" h="35px" _hover={{ color: "orange.400" }} />
           </motion.div>
         </AnimatePresence>
       );
@@ -116,13 +117,7 @@ function DarkMode() {
   }
 
   return (
-    <Flex w="130px" justifyContent="space-between" mr="21px" align="center">
-      {languageToggle === "GB" ? (
-        <Text mr="5px">Appearance:</Text>
-      ) : (
-        <Text ml="12px">Utseende:</Text>
-      )}
-
+    <Flex w="130px" justifyContent="flex-end" mr="21px" align="center">
       <IconButton
         bg="none"
         _hover={{ bg: "none" }}

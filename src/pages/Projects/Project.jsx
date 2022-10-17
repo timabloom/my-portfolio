@@ -35,8 +35,8 @@ function Project(props) {
       >
         <Box flex={1} pr="100px">
           <Heading>{props.project.heading}</Heading>
-          <Text mt="10px">{props.project.text1}</Text>
-          <Box mt="8px">
+          <Text fontSize="lg" mt="10px">{props.project.text1}</Text>
+          <Box mt="8px" fontSize="lg">
             <Text color="yellow.500" display="inline">
               {languageToggle === "GB"
                 ? "Technologies Used: "

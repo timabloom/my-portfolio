@@ -18,23 +18,24 @@ import { language } from "../../Recoil/language/atom";
 function About() {
   const languageToggle = useRecoilValue(language);
   const color = useColorModeValue("white", "white");
+  const bg = useColorModeValue("#24242e", "#414141");
+  const colorHeader = useColorModeValue("#373852", "white");
 
   return (
     <Box ml="80px" maxW="1420px">
-      <Heading m="80px 0 30px 0">
-        {languageToggle === "GB" ? "About me" : "Om mig"}
-      </Heading>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, ease: "easeIn" }}
       >
         <Flex>
-          <Flex direction="column" flex={1}>
-            <Image w="300px" alt="Photo of me" src={timothy} />
-            <Text mt="30px">
+          <Flex direction="column" flex={1} m="80px 0 30px 0">
+            <Box bg={bg} w="300px" p="8px">
+              <Image alt="Photo of me" src={timothy} />
+            </Box>
+            <Heading mt="30px" fontSize="xl">
               {languageToggle === "GB" ? "My Resume" : "Mitt CV"}
-            </Text>
+            </Heading>
             <Link
               color={color}
               _hover={{ textDecor: "none" }}
@@ -50,6 +51,9 @@ function About() {
           </Flex>
           {languageToggle === "GB" ? (
             <Flex direction="column" maxW="1120px">
+              <Heading m="80px 0 30px 50px" color={colorHeader}>
+                {languageToggle === "GB" ? "About me" : "Om mig"}
+              </Heading>
               <Text fontSize="xl" p="0 50px 20px 50px">
                 Hello, My name is Timothy Magee. I am a Frontend Developer from
                 Uppsala, Sweden, and I am currently searching for an internship.
