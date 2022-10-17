@@ -13,8 +13,8 @@ import { useRecoilValue } from "recoil";
 import { language } from "../Recoil/language/atom";
 
 function Footer() {
-  const color = useColorModeValue("#414141", "white");
   const languageToggle = useRecoilValue(language);
+  const color = useColorModeValue("#373852", "white");
 
   return (
     <Flex p="70px 0 70px 0" direction="column" alignItems="center">

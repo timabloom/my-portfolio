@@ -1,4 +1,4 @@
-import { Box, Flex, Text, useMediaQuery, Button, Link } from "@chakra-ui/react";
+import { Box, Flex, Text, useMediaQuery, Button, Link, useColorModeValue } from "@chakra-ui/react";
 import TextAnimation from "./TextAnimation";
 import TechStack from "./TechStack";
 import { useRecoilValue } from "recoil";
@@ -13,6 +13,7 @@ function Home() {
   const [desktopSize] = useMediaQuery("(min-width: 1500px)");
   const [tabletSize] = useMediaQuery("(min-width: 1080px)");
   const [phoneSize] = useMediaQuery("(min-width: 660px)");
+  const bg = useColorModeValue("#24242e", "#414141")
 
   return (
     <motion.div
@@ -42,7 +43,7 @@ function Home() {
               align="center"
               p={desktopSize ? "85px 0 85px 0" : "5.5vw 0 5.5vw 0"}
               color="white"
-              bg="#414141"
+              bg={bg}
             >
               {languageToggle === "GB" ? (
                 <Text fontSize="xl" ml="80px">

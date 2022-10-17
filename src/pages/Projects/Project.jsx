@@ -1,4 +1,12 @@
-import { Heading, Text, Flex, Link, Box, Image } from "@chakra-ui/react";
+import {
+  Heading,
+  Text,
+  Flex,
+  Link,
+  Box,
+  Image,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -8,6 +16,7 @@ import { language } from "../../Recoil/language/atom";
 
 function Project(props) {
   const languageToggle = useRecoilValue(language);
+  const bg = useColorModeValue("#24242e", "#414141");
 
   return (
     <motion.div
@@ -22,17 +31,19 @@ function Project(props) {
         pl="80px"
         m="50px 0 0 0"
         mb={props.endOfList}
-        bg="#414141"
+        bg={bg}
       >
         <Box flex={1} pr="100px">
           <Heading>{props.project.heading}</Heading>
           <Text mt="10px">{props.project.text1}</Text>
-          <Text mt="8px">
+          <Box mt="8px">
             <Text color="yellow.500" display="inline">
-              {languageToggle === "GB" ? "Technologies Used: " : "Använda tekniker: "}
+              {languageToggle === "GB"
+                ? "Technologies Used: "
+                : "Använda tekniker: "}
             </Text>
             {props.project.text2}
-          </Text>
+          </Box>
         </Box>
         <Flex direction="column" align="center" w="260px">
           <Link

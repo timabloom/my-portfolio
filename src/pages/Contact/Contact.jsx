@@ -8,6 +8,7 @@ import {
   Heading,
   Text,
   Link,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -18,6 +19,8 @@ function Contact() {
   const languageToggle = useRecoilValue(language);
   const [formShake, setFormShake] = useState();
   const [clickToggle, setClickToggle] = useState();
+  const bg = useColorModeValue("#24242e", "#414141");
+  const color = useColorModeValue("white", "white");
 
   function handleClick() {
     setClickToggle(!clickToggle);
@@ -47,7 +50,7 @@ function Contact() {
           animate={formShake}
           transition={{ duration: 0.3 }}
         >
-          <Box bg="#414141" p="30px">
+          <Box bg={bg} p="30px" color={color}>
             <FormControl isDisabled>
               <FormLabel>
                 {languageToggle === "GB" ? "Email*" : "Epost*"}

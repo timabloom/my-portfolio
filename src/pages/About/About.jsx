@@ -6,6 +6,7 @@ import {
   Heading,
   Flex,
   Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import pdf from "../../documents/Timothy_Magee_CV.pdf";
 import timothy from "../../assets/timothy.jpeg";
@@ -16,6 +17,7 @@ import { language } from "../../Recoil/language/atom";
 
 function About() {
   const languageToggle = useRecoilValue(language);
+  const color = useColorModeValue("white", "white");
 
   return (
     <Box ml="80px" maxW="1420px">
@@ -34,6 +36,7 @@ function About() {
               {languageToggle === "GB" ? "My Resume" : "Mitt CV"}
             </Text>
             <Link
+              color={color}
               _hover={{ textDecor: "none" }}
               href={pdf}
               download="Timothy_Magee_CV.pdf"
@@ -98,7 +101,7 @@ function About() {
                 som programmerare är att skapa funktionella program och
                 webbplatser med god användarupplevelse i åtanke.
               </Text>
-              <Text fontSize="2xl" p="20px 50px 0 50px">
+              <Text fontSize="2xl" color="yellow.500" p="20px 50px 0 50px">
                 Min teknikstack
               </Text>
               <Text fontSize="xl" p="20px 50px 0 50px">
