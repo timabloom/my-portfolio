@@ -34,7 +34,7 @@ function Contact() {
 
   return (
     <Box align="center">
-      <Heading m="80px 0 30px 0" color={colorHeader} align="center">
+      <Heading m="80px 0 50px 0" color={colorHeader} align="center">
         {languageToggle === "GB" ? "Contact form" : "Kontaktformulär"}
       </Heading>
       <motion.div
