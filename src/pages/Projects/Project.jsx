@@ -6,6 +6,7 @@ import {
   Box,
   Image,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +18,7 @@ import { language } from "../../Recoil/language/atom";
 function Project(props) {
   const languageToggle = useRecoilValue(language);
   const bg = useColorModeValue("#24242e", "#414141");
+  const [tabletSize] = useMediaQuery("(min-width: 1080px)");
 
   return (
     <motion.div
@@ -25,17 +27,20 @@ function Project(props) {
       transition={{ duration: props.duration, ease: "easeIn", type: "spring" }}
     >
       <Flex
+        direction={tabletSize ? "rows" : "column"}
         justify="space-between"
         color="white"
         p="30px"
-        pl="80px"
+        pl={tabletSize ? "80px" : "30px"}
         m="50px 0 0 0"
         mb={props.endOfList}
         bg={bg}
       >
-        <Box flex={1} pr="100px">
+        <Box flex={1} pr={tabletSize ? "50px" : "0"}>
           <Heading>{props.project.heading}</Heading>
-          <Text fontSize="lg" mt="10px">{props.project.text1}</Text>
+          <Text fontSize="lg" mt="10px">
+            {props.project.text1}
+          </Text>
           <Box mt="8px" fontSize="lg">
             <Text color="yellow.500" display="inline">
               {languageToggle === "GB"
@@ -45,7 +50,13 @@ function Project(props) {
             {props.project.text2}
           </Box>
         </Box>
-        <Flex direction="column" align="center" w="260px">
+        <Flex
+          direction="column"
+          alignSelf="center"
+          align="center"
+          maxW={tabletSize ? "360px" : "500px"}
+          mt={tabletSize ? "0" : "30px"}
+        >
           <Link
             _hover={{ opacity: "70%" }}
             target="blank"
@@ -56,6 +67,7 @@ function Project(props) {
           <Flex>
             <Link
               m="10px"
+              mb="0"
               href={props.project.githubLink}
               target="_blank"
               _hover={{ opacity: "70%" }}
@@ -65,6 +77,7 @@ function Project(props) {
             <Link href={props.project.website} target="_blank">
               <ExternalLinkIcon
                 m="10px"
+                mb="0"
                 w={8}
                 h={8}
                 _hover={{ opacity: "70%" }}

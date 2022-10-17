@@ -1,4 +1,4 @@
-import portfolioWebsite from "../assets/portfolio-website.png";
+import portfolioWebsiteDark from "../assets/portfolio-website-dark.png";
 import chatWebsite from "../assets/chat-website.png";
 import catImagesWebsite from "../assets/cat-images-website.png";
 import yahtzeeWebsite from "../assets/yahtzee-website.png";
@@ -13,7 +13,7 @@ export default function projectInfo(language, project) {
         text2:
           "JavaScript, Node.js, React, Chakra UI, Framer Motion",
         githubLink: "https://github.com/timabloom/my-portfolio",
-        image: portfolioWebsite,
+        image: portfolioWebsiteDark,
       };
     } else if (project === 2) {
       return {
@@ -57,7 +57,7 @@ export default function projectInfo(language, project) {
         text2:
           "JavaScript, Node.js, React, Chakra UI, Framer Motion",
         githubLink: "https://github.com/timabloom/my-portfolio",
-        image: portfolioWebsite,
+        image: portfolioWebsiteDark,
       };
     } else if (project === 2) {
       return {
