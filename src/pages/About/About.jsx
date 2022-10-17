@@ -93,6 +93,9 @@ function About() {
             </Flex>
           ) : (
             <Flex direction="column" maxW="1120px">
+              <Heading m="80px 0 30px 50px" color={colorHeader}>
+                {languageToggle === "GB" ? "About me" : "Om mig"}
+              </Heading>
               <Text fontSize="xl" p="0 50px 20px 50px">
                 Hej, jag heter Timothy Magee. Jag är en frontend-utvecklare från
                 Uppsala, Sverige och jag letar just nu efter en praktikplats.
