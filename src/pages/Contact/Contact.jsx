@@ -33,7 +33,7 @@ function Contact() {
   }
 
   return (
-    <Box>
+    <Box align="center">
       <Heading m="80px 0 30px 0" color={colorHeader} align="center">
         {languageToggle === "GB" ? "Contact form" : "Kontaktformulär"}
       </Heading>
@@ -51,7 +51,7 @@ function Contact() {
           animate={formShake}
           transition={{ duration: 0.3 }}
         >
-          <Box bg={bg} p="30px" color={color}>
+          <Box bg={bg} maxW="375px" p="30px" m="35px 20px 20px 20px" color={color}>
             <FormControl isDisabled>
               <FormLabel>
                 {languageToggle === "GB" ? "Email*" : "Epost*"}
@@ -72,18 +72,18 @@ function Contact() {
           </Box>
         </motion.div>
       </motion.div>
-      <Box align="center">
+      <Box>
         <Heading color="orange.500" m="30px 0 20px 0">
           {languageToggle === "GB"
             ? "API in development!"
             : "API under utveckling!"}
         </Heading>
-        <Text>
+        <Text m="0 10px 0 10px">
           {languageToggle === "GB"
             ? "The contact form is currently not working."
             : "Kontaktformuläret fungerar inte för tillfället."}
         </Text>
-        <Text>
+        <Text m="0 13px 0 13px">
           {languageToggle === "GB"
             ? "Contact me through this email:"
             : "Kontakta mig via den här epostadressen:"}

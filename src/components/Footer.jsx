@@ -17,7 +17,7 @@ function Footer() {
   const color = useColorModeValue("#373852", "white");
 
   return (
-    <Flex p="70px 0 70px 0" direction="column" alignItems="center">
+    <Flex p="70px 0 70px 0" direction="column" alignItems="center" m="0 13px 0 13px">
       <Box mb={5} color={color}>
         <Link
           mr={6}
