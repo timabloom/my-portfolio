@@ -71,7 +71,7 @@ function Header() {
       justifyContent="space-between"
       align="center"
       ml={tabletSize ? "80px" : "0"}
-      p={tabletSize ? "20px 0 20px 0px" : "20px 25px 20px 25px"}
+      p={tabletSize ? "20px 0 20px 0px" : "20px 20px 20px 20px"}
       borderBottom="solid 1px"
     >
       <Link
