@@ -58,7 +58,7 @@ function About() {
                 others. My goal as a programmer is to develop functional
                 programs and websites with good user experience in mind.
               </Text>
-              <Text fontSize="2xl" p="20px 50px 0 50px">
+              <Text fontSize="2xl" color="yellow.500" p="20px 50px 0 50px">
                 My Tech Stack
               </Text>
               <Text fontSize="xl" p="20px 50px 0 50px">

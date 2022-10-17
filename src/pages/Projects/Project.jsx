@@ -3,8 +3,12 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
+import { useRecoilValue } from "recoil";
+import { language } from "../../Recoil/language/atom";
 
 function Project(props) {
+  const languageToggle = useRecoilValue(language);
+
   return (
     <motion.div
       initial={{ x: "-100%", opacity: 0 }}
@@ -23,7 +27,12 @@ function Project(props) {
         <Box flex={1} pr="100px">
           <Heading>{props.project.heading}</Heading>
           <Text mt="10px">{props.project.text1}</Text>
-          <Text mt="8px">{props.project.text2}</Text>
+          <Text mt="8px">
+            <Text color="yellow.500" display="inline">
+              {languageToggle === "GB" ? "Technologies Used: " : "Använda tekniker: "}
+            </Text>
+            {props.project.text2}
+          </Text>
         </Box>
         <Flex direction="column" align="center" w="260px">
           <Link
