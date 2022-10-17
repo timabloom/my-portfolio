@@ -23,6 +23,8 @@ import { Link as ReachLink } from "react-router-dom";
 import DarkMode from "./DarkMode";
 import { useRecoilState } from "recoil";
 import { language } from "../Recoil/language/atom";
+import GB from "../assets/gb.svg";
+import SE from "../assets/se.svg";
 
 function Header() {
   const [languageToggle, setLanguageToggle] = useRecoilState(language);
@@ -70,7 +72,13 @@ function Header() {
       p={tabletSize ? "30px 0 30px 0px" : "30px 35px 30px 35px"}
       borderBottom="solid 1px"
     >
-      <Link _hover={{ textDecor: "none" }} w="220px" fontSize="xl" as={ReachLink} to="/">
+      <Link
+        _hover={{ textDecor: "none" }}
+        w="220px"
+        fontSize="xl"
+        as={ReachLink}
+        to="/"
+      >
         {languageToggle === "GB" ? "My Portfolio" : "Min Portfolio"}
       </Link>
       {tabletSize ? (
@@ -98,12 +106,7 @@ function Header() {
                 disabled={flagDisabledGB}
                 _disabled
               >
-                <Image
-                  filter={grayFlagGB}
-                  h="25px"
-                  alt="EN"
-                  src="http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg"
-                />
+                <Image filter={grayFlagGB} h="25px" alt="EN" src={GB} />
               </Button>
             </Tooltip>
             <Tooltip hasArrow label="Svenska">
@@ -112,12 +115,7 @@ function Header() {
                 disabled={flagDisabledSE}
                 _disabled
               >
-                <Image
-                  filter={grayFlagSE}
-                  h="25px"
-                  alt="SV"
-                  src="http://purecatamphetamine.github.io/country-flag-icons/3x2/SE.svg"
-                />
+                <Image filter={grayFlagSE} h="25px" alt="SV" src={SE} />
               </Button>
             </Tooltip>
           </Flex>
@@ -228,12 +226,7 @@ function Header() {
                     _disabled
                     p="0 12px 0 12px"
                   >
-                    <Image
-                      filter={grayFlagGB}
-                      h="25px"
-                      alt="EN"
-                      src="http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg"
-                    />
+                    <Image filter={grayFlagGB} h="25px" alt="EN" src={GB} />
                   </Button>
                 </Tooltip>
                 <Tooltip hasArrow label="Svenska">
@@ -243,12 +236,7 @@ function Header() {
                     _disabled
                     p="0 12px 0 12px"
                   >
-                    <Image
-                      filter={grayFlagSE}
-                      h="25px"
-                      alt="SV"
-                      src="http://purecatamphetamine.github.io/country-flag-icons/3x2/SE.svg"
-                    />
+                    <Image filter={grayFlagSE} h="25px" alt="SV" src={SE} />
                   </Button>
                 </Tooltip>
               </DrawerFooter>
