@@ -10,9 +10,9 @@ export default function projectInfo(language, project) {
         heading: "My Portfolio",
         text1:
           "I have learned a lot from making my portfolio website. The website has two built-in language options: English and Swedish. I love dark mode, so I created an option for those who like it. I used the Chakra UI library for styling and Framer Motion for animations. I also used Recoil instead of React context.",
-        text2:
-          "JavaScript, Node.js, React, Chakra UI, Framer Motion",
+        text2: "JavaScript, Node.js, React, Chakra UI, Framer Motion",
         githubLink: "https://github.com/timabloom/my-portfolio",
+        website: "https://magees-portfolio.netlify.app",
         image: portfolioWebsiteDark,
       };
     } else if (project === 2) {
@@ -20,8 +20,7 @@ export default function projectInfo(language, project) {
         heading: "Chatty Chatty Bang Bang",
         text1:
           "Chatty Chatty Bang Bang is a real-time chat application built for a course about web servers and databases. The purpose of the assignment was to learn how to create an API using Express. I also connected a database on Heroku to my API. This app lets you chat with others by creating or joining a room. Rooms are removed when no one is occupying them. As an option, you can create a name for yourself; otherwise, a random name is given. Emojis and private messages are also possible to send in the rooms.",
-        text2:
-          "JavaScript, Node.js, React, Chakra UI, Express.js, Socket.io",
+        text2: "JavaScript, Node.js, React, Chakra UI, Express.js, Socket.io",
         githubLink: "https://github.com/cme-timothy/realtime-chat-klient",
         website: "https://timothys-realtime-chat-klient.herokuapp.com",
         image: chatWebsite,
@@ -54,9 +53,9 @@ export default function projectInfo(language, project) {
         heading: "Min Portfolio",
         text1:
           "Jag har lärt mig mycket av att göra en egen portfolio-hemsida.  Hemsidan har två inbyggda språkalternativ: engelska och svenska. Jag älskar om mörkt tema så jag skapade ett sådant tillval för de som gillar det. Jag använde biblioteket Chakra UI för styling och Framer Motion för animationer. Jag använde också Recoil istället för React context.",
-        text2:
-          "JavaScript, Node.js, React, Chakra UI, Framer Motion",
+        text2: "JavaScript, Node.js, React, Chakra UI, Framer Motion",
         githubLink: "https://github.com/timabloom/my-portfolio",
+        website: "https://magees-portfolio.netlify.app",
         image: portfolioWebsiteDark,
       };
     } else if (project === 2) {
@@ -64,8 +63,7 @@ export default function projectInfo(language, project) {
         heading: "Chatty Chatty Bang Bang",
         text1:
           "Chatty Chatty Bang Bang är en chattapplikation som fungerar i realtid, jag gjorde den när jag läste en kurs om webbservrar och databaser. Syftet med uppdraget var att lära sig hur man skapar ett API med hjälp av Express. Jag kopplade också en databas på heroku till mitt API. I den här appen kan du chatta med andra genom att skapa ett rum eller gå med i ett rum. Ett rum raderas om det inte finns någon i rummet. Du har möljlighet att skapa ett namn åt dig själv, annars får du ett slumpmässigt namn. Det är även möjligt att skicka emojis och privata meddelanden i rummen.",
-        text2:
-          "JavaScript, Node.js, React, Chakra UI, Express.js, Socket.io",
+        text2: "JavaScript, Node.js, React, Chakra UI, Express.js, Socket.io",
         githubLink: "https://github.com/cme-timothy/realtime-chat-klient",
         website: "https://timothys-realtime-chat-klient.herokuapp.com",
         image: chatWebsite,
