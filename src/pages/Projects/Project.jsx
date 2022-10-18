@@ -83,7 +83,7 @@ function Project(props) {
                 <motion.div
                   initial={{ opacity: 1 }}
                   animate={{ opacity: !loaded ? 1 : 0 }}
-                  transition={{ duration: 1, ease: "easeIn" }}
+                  transition={{ duration: 0.4, ease: "easeIn" }}
                 >
                   <Blurhash
                     hash={props.project.hash}

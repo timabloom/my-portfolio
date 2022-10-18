@@ -20,7 +20,7 @@ function Projects() {
       m={tabletSize ? "0 0 0 80px" : "0 20px 0 20px"}
       direction="column"
     >
-      <Heading mt="80px" color={colorHeader}>
+      <Heading mt="80px" ml={tabletSize && "-80px"} align="center" color={colorHeader}>
         {languageToggle === "GB" ? "Projects" : "Projekt"}
       </Heading>
       <Project duration={1} project={retrieveText(languageToggle, 1)} />
