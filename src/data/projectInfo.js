@@ -42,7 +42,7 @@ export default function projectInfo(language, project) {
         text1:
           "American Yahtzee is a game I built for a course in JavaScript. I found out through this project that there are different rules for Yahtzee; this game follows the American ruleset. Almost everything in the game is automated; there is no need to count points. You can't cheat in this game, either.",
         text2: "JavaScript, CSS",
-        githubLink: "https://github.com/cme-timothy/yatzy-assignment",
+        githubLink: "https://github.com/cme-timothy/yahtzee-assignment",
         website: "https://american-yahtzee.netlify.app",
         image: yahtzeeWebsite,
       };
@@ -81,11 +81,11 @@ export default function projectInfo(language, project) {
       };
     } else if (project === 4) {
       return {
-        heading: "Amerikansk Yatzy",
+        heading: "Amerikansk Yahtzee",
         text1:
           "A Yahtzee game built for a course in JavaScript. I found out through this project that there are different rules for Yahtzee; this game follows the American ruleset. Almost everything in the game is automated; there is no need to count points. You can't cheat in this game either.",
         text2: "JavaScript, CSS",
-        githubLink: "https://github.com/cme-timothy/yatzy-assignment",
+        githubLink: "https://github.com/cme-timothy/yahtzee-assignment",
         website: "https://american-yahtzee.netlify.app",
         image: yahtzeeWebsite,
       };
