@@ -7,6 +7,7 @@ import {
   Flex,
   Text,
   useColorModeValue,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import pdf from "../../documents/Timothy_Magee_CV.pdf";
 import timothy from "../../assets/timothy.jpeg";
@@ -14,12 +15,20 @@ import { motion } from "framer-motion";
 import { DownloadIcon } from "@chakra-ui/icons";
 import { useRecoilValue } from "recoil";
 import { language } from "../../Recoil/language/atom";
+import { Blurhash } from "react-blurhash";
+import { useState } from "react";
 
 function About() {
   const languageToggle = useRecoilValue(language);
   const color = useColorModeValue("white", "white");
   const bg = useColorModeValue("#24242e", "#414141");
   const colorHeader = useColorModeValue("#373852", "white");
+  const [loaded, setLoaded] = useState(false);
+  const [tabletSize] = useMediaQuery("(min-width: 1080px)");
+
+  function handleLoad() {
+    setLoaded(true);
+  }
 
   return (
     <Box ml="80px" maxW="1420px">
@@ -31,7 +40,31 @@ function About() {
         <Flex>
           <Flex direction="column" flex={1} m="80px 0 30px 0">
             <Box bg={bg} w="300px" p="8px">
-              <Image alt="Photo of me" src={timothy} />
+              <Flex>
+                <Image
+                  src={timothy}
+                  height={378}
+                  width={284}
+                  alt="Photo of me"
+                  onLoad={handleLoad}
+                />
+                <Box position="absolute">
+                  <motion.div
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: !loaded ? 1 : 0 }}
+                    transition={{ duration: 1, ease: "easeIn" }}
+                  >
+                    <Blurhash
+                      hash={"UZJ@zW~CMcoxvxngx]x]t6t7WCxYtRozV@aK"}
+                      height={378}
+                      width={284}
+                      resolutionX={32}
+                      resolutionY={32}
+                      punch={1}
+                    />
+                  </motion.div>
+                </Box>
+              </Flex>
             </Box>
             <Heading mt="30px" fontSize="xl">
               {languageToggle === "GB" ? "My Resume" : "Mitt CV"}

@@ -15,7 +15,11 @@ function Projects() {
   const [tabletSize] = useMediaQuery("(min-width: 1080px)");
 
   return (
-    <Flex maxW={tabletSize ? "1420px" : "600px"} m={tabletSize ? "0 0 0 80px" : "0 20px 0 20px"} direction="column">
+    <Flex
+      maxW={tabletSize ? "1420px" : "600px"}
+      m={tabletSize ? "0 0 0 80px" : "0 20px 0 20px"}
+      direction="column"
+    >
       <Heading mt="80px" color={colorHeader}>
         {languageToggle === "GB" ? "Projects" : "Projekt"}
       </Heading>

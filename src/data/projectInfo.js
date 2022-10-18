@@ -14,6 +14,7 @@ export default function projectInfo(language, project) {
         githubLink: "https://github.com/timabloom/my-portfolio",
         website: "https://magees-portfolio.netlify.app",
         image: portfolioWebsiteDark,
+        hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
       };
     } else if (project === 2) {
       return {
@@ -24,6 +25,7 @@ export default function projectInfo(language, project) {
         githubLink: "https://github.com/cme-timothy/realtime-chat-klient",
         website: "https://timothys-realtime-chat-klient.herokuapp.com",
         image: chatWebsite,
+        hash: "U9S~w]?ISc~Bx^WEoys.nVNYxHI:^+NZ%2NG",
       };
     } else if (project === 3) {
       return {
@@ -35,6 +37,7 @@ export default function projectInfo(language, project) {
           "https://github.com/cme-timothy/cat-images-webpage-assignment",
         website: "https://cat-images-in-a-heartbeat.netlify.app",
         image: catImagesWebsite,
+        hash: "UrP%9Tof_Nxbe:j[ofaf-;j[M_f6%3a{R*j[",
       };
     } else if (project === 4) {
       return {
@@ -45,6 +48,7 @@ export default function projectInfo(language, project) {
         githubLink: "https://github.com/cme-timothy/yahtzee-assignment",
         website: "https://american-yahtzee.netlify.app",
         image: yahtzeeWebsite,
+        hash: "U9S?DVxu~q~q_3ayWBoft7t7WBM{%May%Mof",
       };
     }
   } else {
@@ -57,6 +61,7 @@ export default function projectInfo(language, project) {
         githubLink: "https://github.com/timabloom/my-portfolio",
         website: "https://magees-portfolio.netlify.app",
         image: portfolioWebsiteDark,
+        hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
       };
     } else if (project === 2) {
       return {
@@ -67,6 +72,7 @@ export default function projectInfo(language, project) {
         githubLink: "https://github.com/cme-timothy/realtime-chat-klient",
         website: "https://timothys-realtime-chat-klient.herokuapp.com",
         image: chatWebsite,
+        hash: "U9S~w]?ISc~Bx^WEoys.nVNYxHI:^+NZ%2NG",
       };
     } else if (project === 3) {
       return {
@@ -78,6 +84,7 @@ export default function projectInfo(language, project) {
           "https://github.com/cme-timothy/cat-images-webpage-assignment",
         website: "https://cat-images-in-a-heartbeat.netlify.app",
         image: catImagesWebsite,
+        hash: "UrP%9Tof_Nxbe:j[ofaf-;j[M_f6%3a{R*j[",
       };
     } else if (project === 4) {
       return {
@@ -88,6 +95,7 @@ export default function projectInfo(language, project) {
         githubLink: "https://github.com/cme-timothy/yahtzee-assignment",
         website: "https://american-yahtzee.netlify.app",
         image: yahtzeeWebsite,
+        hash: "U9S?DVxu~q~q_3ayWBoft7t7WBM{%May%Mof",
       };
     }
   }

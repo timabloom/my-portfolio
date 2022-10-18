@@ -14,11 +14,19 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 import { useRecoilValue } from "recoil";
 import { language } from "../../Recoil/language/atom";
+import { Blurhash } from "react-blurhash";
+import { useState } from "react";
 
 function Project(props) {
   const languageToggle = useRecoilValue(language);
   const bg = useColorModeValue("#24242e", "#414141");
   const [tabletSize] = useMediaQuery("(min-width: 1080px)");
+  const [mobileSize] = useMediaQuery("(min-width: 460px)");
+  const [loaded, setLoaded] = useState(false);
+
+  function handleLoad() {
+    setLoaded(true);
+  }
 
   return (
     <motion.div
@@ -62,7 +70,32 @@ function Project(props) {
             target="blank"
             href={props.project.website}
           >
-            <Image src={props.project.image} alt="Project picture" />
+            <Flex>
+              <Image
+                src={props.project.image}
+                width={mobileSize ? 360 : 275}
+                height={mobileSize ? 280 : 214}
+                loading="lazy"
+                alt="Project picture"
+                onLoad={handleLoad}
+              />
+              <Box position="absolute">
+                <motion.div
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: !loaded ? 1 : 0 }}
+                  transition={{ duration: 1, ease: "easeIn" }}
+                >
+                  <Blurhash
+                    hash={props.project.hash}
+                    width={mobileSize ? 360 : 275}
+                    height={mobileSize ? 280 : 214}
+                    resolutionX={32}
+                    resolutionY={32}
+                    punch={1}
+                  />
+                </motion.div>
+              </Box>
+            </Flex>
           </Link>
           <Flex>
             <Link
