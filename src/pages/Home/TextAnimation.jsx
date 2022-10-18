@@ -32,6 +32,7 @@ function TextAnimation() {
   const [textMarkerAnimation, setTextMarkerAnimation] = useState();
   const [desktopSize] = useMediaQuery("(min-width: 1500px)");
   const [laptopSize] = useMediaQuery("(min-width: 1080px)");
+  const [phoneSize] = useMediaQuery("(min-width: 660px)");
 
   useEffect(() => {
     let textTop = [];
