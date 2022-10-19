@@ -16,11 +16,11 @@ function GifAnimation() {
     let count1 = "";
     let count2 = "";
     if (languageToggle === "GB") {
-      count1 = "18400";
-      count2 = "24000";
+      count1 = "12000";
+      count2 = "17400";
     } else {
-      count1 = "20500";
-      count2 = "26100";
+      count1 = "13500";
+      count2 = "19100";
     }
     if (animationDone === false) {
       setMeAnimation(typingGif);
