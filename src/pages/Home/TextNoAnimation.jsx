@@ -4,39 +4,20 @@ import { language } from "../../Recoil/language/atom";
 
 function TextNoAnimation(props) {
   const languageToggle = useRecoilValue(language);
-  const [desktopSize] = useMediaQuery("(min-width: 1500px)");
-  const [laptopSize] = useMediaQuery("(min-width: 1080px)");
-  const [phoneSize] = useMediaQuery("(min-width: 660px)");
+  const [laptopSize] = useMediaQuery("(min-width: 1250px)");
+  const [phoneSize] = useMediaQuery("(min-width: 890px)");
 
   return (
     <>
       {props.placement === "top" ? (
-        <Text
-          fontSize={
-            desktopSize
-              ? "6xl"
-              : laptopSize
-              ? "4vw"
-              : phoneSize
-              ? "4.5vw"
-              : "4xl"
-          }
-        >
+        <Text fontSize={laptopSize ? "6xl" : phoneSize ? "50px" : "42px"} fontWeight="bold">
           {languageToggle === "GB" ? "Hello! I Am" : "Hej! Jag Heter"}
           <br />
           Timothy Magee,
         </Text>
       ) : (
         <Text
-          fontSize={
-            desktopSize
-              ? "4xl"
-              : laptopSize
-              ? "2.4vw"
-              : phoneSize
-              ? "2.8vw"
-              : "2xl"
-          }
+          fontSize={laptopSize ? "4xl" : phoneSize ? "3xl" : "26px"}
           fontWeight="medium"
           mt="24px"
         >
