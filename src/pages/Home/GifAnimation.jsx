@@ -14,8 +14,8 @@ function GifAnimation() {
         {laptopSize && (
           <Text pos="absolute" m="5px">
             {languageToggle === "GB"
-              ? "Last updated: 19-10-2022"
-              : "Senast uppdaterad: 19-10-2022"}
+              ? "Last updated: 31-03-2023"
+              : "Senast uppdaterad: 31-03-2023"}
           </Text>
         )}
       </Flex>
