@@ -1,11 +1,9 @@
 import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
-const colorMode = {
-  config: {
-    initialColorMode: "dark",
-    useSystemColorMode: true,
-  },
+const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: true,
 };
 
 const styles = {
@@ -24,7 +22,7 @@ const components = {
       bg: colorMode === "dark" ? "#505050" : "#373852",
       _hover: {
         bg: colorMode === "dark" ? "#606060" : "#4c4d70",
-        _disabled: {bg: colorMode === "dark" ? "#505050" : "#373852"},
+        _disabled: { bg: colorMode === "dark" ? "#505050" : "#373852" },
       },
     }),
     variants: ({ colorMode }) => ({
@@ -32,7 +30,7 @@ const components = {
         bg: colorMode === "dark" ? "#505050" : "#373852",
         _hover: {
           bg: colorMode === "dark" ? "#606060" : "#4c4d70",
-          _disabled: {bg: colorMode === "dark" ? "#505050" : "#373852"},
+          _disabled: { bg: colorMode === "dark" ? "#505050" : "#373852" },
         },
       },
     }),
@@ -43,7 +41,7 @@ const components = {
 };
 
 const theme = extendTheme({
-  colorMode,
+  config,
   styles,
   components,
 });
