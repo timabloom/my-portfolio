@@ -89,14 +89,14 @@ function Header() {
             <Link mr={7} as={ReachLink} to="/">
               {languageToggle === "GB" ? "Home" : "Hem"}
             </Link>
-            <Link mr={7} as={ReachLink} to="/About">
+            <Link mr={7} as={ReachLink} to="/about">
               {languageToggle === "GB" ? "About" : "Om mig"}
             </Link>
-            <Link mr={7} as={ReachLink} to="/Projects">
+            <Link mr={7} as={ReachLink} to="/projects">
               {languageToggle === "GB" ? "Projects" : "Projekt"}
             </Link>
             <Link as={ReachLink} to="/Contact">
-              {languageToggle === "GB" ? "Contact" : "Kontakt"}
+              {languageToggle === "GB" ? "contact" : "Kontakt"}
             </Link>
           </Box>
           <Flex alignItems="center">
