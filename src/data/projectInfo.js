@@ -2,21 +2,43 @@ import portfolioWebsiteDark from "../assets/portfolio-website-dark.png";
 import chatWebsite from "../assets/chat-website.png";
 import catImagesWebsite from "../assets/cat-images-website.png";
 import yahtzeeWebsite from "../assets/yahtzee-website.png";
+import tarotSanctuaryWebsite from "../assets/tarot-sanctuary-website.png";
 
 export default function projectInfo(language, project) {
   if (language === "GB") {
     if (project === 1) {
+      return {
+        heading: "Tarot Sanctuary (in development)",
+        text1:
+          "I have learned a lot from making my portfolio website. The website has two built-in language options: English and Swedish. I love dark mode, so I created an option for those who like it. I used the Chakra UI library for styling and Framer Motion for animations. I also used Recoil instead of React context.",
+        text2: "JavaScript, TypeScript, Node.js, SvelteKit",
+        githubLink: "https://github.com/timabloom/tarot-sanctuary",
+        website: "https://tarot-sanctuary.onrender.com",
+        image: tarotSanctuaryWebsite,
+        hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
+      };
+    } else if (project === 2) {
+      return {
+        heading: "Kalejdoskop API (in development)",
+        text1:
+          "I have learned a lot from making my portfolio website. The website has two built-in language options: English and Swedish. I love dark mode, so I created an option for those who like it. I used the Chakra UI library for styling and Framer Motion for animations. I also used Recoil instead of React context.",
+        text2: "JavaScript, Typescript, Node.js, Express.js, Prisma, SQLite ",
+        githubLink:
+          "https://github.com/orgs/sverok-man-collaboration/repositories",
+        hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
+      };
+    } else if (project === 3) {
       return {
         heading: "My Portfolio",
         text1:
           "I have learned a lot from making my portfolio website. The website has two built-in language options: English and Swedish. I love dark mode, so I created an option for those who like it. I used the Chakra UI library for styling and Framer Motion for animations. I also used Recoil instead of React context.",
         text2: "JavaScript, Node.js, React, Chakra UI, Framer Motion",
         githubLink: "https://github.com/timabloom/my-portfolio",
-        website: "https://magees-portfolio.netlify.app",
+        website: "https://timothy-magees-portfolio.onrender.com",
         image: portfolioWebsiteDark,
         hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
       };
-    } else if (project === 2) {
+    } else if (project === 4) {
       return {
         heading: "Chatty Chatty Bang Bang",
         text1:
@@ -27,7 +49,7 @@ export default function projectInfo(language, project) {
         image: chatWebsite,
         hash: "U9S~w]?ISc~Bx^WEoys.nVNYxHI:^+NZ%2NG",
       };
-    } else if (project === 3) {
+    } else if (project === 5) {
       return {
         heading: "Cat images in a Heartbeat",
         text1:
@@ -39,7 +61,7 @@ export default function projectInfo(language, project) {
         image: catImagesWebsite,
         hash: "UrP%9Tof_Nxbe:j[ofaf-;j[M_f6%3a{R*j[",
       };
-    } else if (project === 4) {
+    } else if (project === 6) {
       return {
         heading: "American Yahtzee",
         text1:
@@ -54,16 +76,37 @@ export default function projectInfo(language, project) {
   } else {
     if (project === 1) {
       return {
+        heading: "Tarot Sanctuary (under utveckling)",
+        text1:
+          "Jag har lärt mig mycket av att göra en egen portfolio-hemsida.  Hemsidan har två inbyggda språkalternativ: engelska och svenska. Jag älskar om mörkt tema så jag skapade ett sådant tillval för de som gillar det. Jag använde biblioteket Chakra UI för styling och Framer Motion för animationer. Jag använde också Recoil istället för React context.",
+        text2: "JavaScript, TypeScript, Node.js, SvelteKit",
+        githubLink: "https://github.com/timabloom/tarot-sanctuary",
+        website: "https://tarot-sanctuary.onrender.com",
+        image: tarotSanctuaryWebsite,
+        hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
+      };
+    } else if (project === 2) {
+      return {
+        heading: "Kalejdoskop API (under utveckling)",
+        text1:
+          "Jag har lärt mig mycket av att göra en egen portfolio-hemsida.  Hemsidan har två inbyggda språkalternativ: engelska och svenska. Jag älskar om mörkt tema så jag skapade ett sådant tillval för de som gillar det. Jag använde biblioteket Chakra UI för styling och Framer Motion för animationer. Jag använde också Recoil istället för React context.",
+        text2: "JavaScript, Typescript, Node.js, Express.js, Prisma, SQLite",
+        githubLink:
+          "https://github.com/orgs/sverok-man-collaboration/repositories",
+        hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
+      };
+    } else if (project === 3) {
+      return {
         heading: "Min Portfolio",
         text1:
           "Jag har lärt mig mycket av att göra en egen portfolio-hemsida.  Hemsidan har två inbyggda språkalternativ: engelska och svenska. Jag älskar om mörkt tema så jag skapade ett sådant tillval för de som gillar det. Jag använde biblioteket Chakra UI för styling och Framer Motion för animationer. Jag använde också Recoil istället för React context.",
         text2: "JavaScript, Node.js, React, Chakra UI, Framer Motion",
         githubLink: "https://github.com/timabloom/my-portfolio",
-        website: "https://magees-portfolio.netlify.app",
+        website: "https://timothy-magees-portfolio.onrender.com",
         image: portfolioWebsiteDark,
         hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
       };
-    } else if (project === 2) {
+    } else if (project === 4) {
       return {
         heading: "Chatty Chatty Bang Bang",
         text1:
@@ -74,7 +117,7 @@ export default function projectInfo(language, project) {
         image: chatWebsite,
         hash: "U9S~w]?ISc~Bx^WEoys.nVNYxHI:^+NZ%2NG",
       };
-    } else if (project === 3) {
+    } else if (project === 5) {
       return {
         heading: "Cat images in a Heartbeat",
         text1:
@@ -86,7 +129,7 @@ export default function projectInfo(language, project) {
         image: catImagesWebsite,
         hash: "UrP%9Tof_Nxbe:j[ofaf-;j[M_f6%3a{R*j[",
       };
-    } else if (project === 4) {
+    } else if (project === 6) {
       return {
         heading: "Amerikansk Yahtzee",
         text1:

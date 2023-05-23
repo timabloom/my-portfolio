@@ -20,15 +20,22 @@ function Projects() {
       m={tabletSize ? "0 0 0 80px" : "0 20px 0 20px"}
       direction="column"
     >
-      <Heading mt="80px" ml={tabletSize && "-80px"} align="center" color={colorHeader}>
+      <Heading
+        mt="80px"
+        ml={tabletSize && "-80px"}
+        align="center"
+        color={colorHeader}
+      >
         {languageToggle === "GB" ? "Projects" : "Projekt"}
       </Heading>
       <Project duration={1} project={retrieveText(languageToggle, 1)} />
       <Project duration={1.1} project={retrieveText(languageToggle, 2)} />
       <Project duration={1.2} project={retrieveText(languageToggle, 3)} />
+      <Project duration={1.3} project={retrieveText(languageToggle, 4)} />
+      <Project duration={1.4} project={retrieveText(languageToggle, 5)} />
       <Project
-        duration={1.3}
-        project={retrieveText(languageToggle, 4)}
+        duration={1.5}
+        project={retrieveText(languageToggle, 6)}
         endOfList={0}
       />
     </Flex>
