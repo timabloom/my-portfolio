@@ -10,18 +10,17 @@ export default function projectInfo(language, project) {
       return {
         heading: "Tarot Sanctuary (in development)",
         text1:
-          "I have learned a lot from making my portfolio website. The website has two built-in language options: English and Swedish. I love dark mode, so I created an option for those who like it. I used the Chakra UI library for styling and Framer Motion for animations. I also used Recoil instead of React context.",
+          "Tarot Sanctuary is an intuitive and interactive tarot reading platform that hosts historical decks for use in fun, playful ways. This project has served as a rich learning ground, enabling me to deepen my proficiency with SvelteKit, a frontend developer-friendly meta-framework now favored by a growing community of developers, myself included. I've learned to harness the power of AI using Codeium and ChatGPT and have successfully installed my own local chatbot. My design skills have been honed throughout this project as I took the time to learn and utilize Figma, culminating, in my opinion, in a visually appealing interface. This project is a labor of love, and I'm truly enjoying the journey.",
         text2: "JavaScript, TypeScript, Node.js, SvelteKit",
         githubLink: "https://github.com/timabloom/tarot-sanctuary",
         website: "https://tarot-sanctuary.onrender.com",
         image: tarotSanctuaryWebsite,
-        hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
+        hash: "L8N^YrR,_N%100s.DiNH00ofD%R*",
       };
     } else if (project === 2) {
       return {
         heading: "Kalejdoskop API (in development)",
-        text1:
-          "I have learned a lot from making my portfolio website. The website has two built-in language options: English and Swedish. I love dark mode, so I created an option for those who like it. I used the Chakra UI library for styling and Framer Motion for animations. I also used Recoil instead of React context.",
+        text1: "",
         text2: "JavaScript, Typescript, Node.js, Express.js, Prisma, SQLite ",
         githubLink:
           "https://github.com/orgs/sverok-man-collaboration/repositories",
@@ -78,18 +77,17 @@ export default function projectInfo(language, project) {
       return {
         heading: "Tarot Sanctuary (under utveckling)",
         text1:
-          "Jag har lärt mig mycket av att göra en egen portfolio-hemsida.  Hemsidan har två inbyggda språkalternativ: engelska och svenska. Jag älskar om mörkt tema så jag skapade ett sådant tillval för de som gillar det. Jag använde biblioteket Chakra UI för styling och Framer Motion för animationer. Jag använde också Recoil istället för React context.",
+          "Tarot Sanctuary är en intuitiv och interaktiv plattform för tarottolkning, som erbjuder historiska kortlekar för användning på ett roligt och lekfullt sätt. Detta projekt har varit en ovärderlig lärresurs, där jag har kunnat fördjupa min kunskap i SvelteKit, ett frontend-vänligt meta-ramverk som nu uppskattas av en växande skara utvecklare, mig själv inkluderad. Jag har lärt mig att använda AI:s kraft genom Codeium och ChatGPT, och har framgångsrikt satt upp en egen lokal chatbot. Mina designfärdigheter har förfinats genom detta projekt, då jag tagit mig tid att lära mig och utnyttja Figma, vilket har resulterat i ett gränssnitt som, enligt min mening, är visuellt tilltalande. Detta projekt är ett passionerat arbete och jag njuter verkligen av varje steg på resan.",
         text2: "JavaScript, TypeScript, Node.js, SvelteKit",
         githubLink: "https://github.com/timabloom/tarot-sanctuary",
         website: "https://tarot-sanctuary.onrender.com",
         image: tarotSanctuaryWebsite,
-        hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
+        hash: "L8N^YrR,_N%100s.DiNH00ofD%R*",
       };
     } else if (project === 2) {
       return {
         heading: "Kalejdoskop API (under utveckling)",
-        text1:
-          "Jag har lärt mig mycket av att göra en egen portfolio-hemsida.  Hemsidan har två inbyggda språkalternativ: engelska och svenska. Jag älskar om mörkt tema så jag skapade ett sådant tillval för de som gillar det. Jag använde biblioteket Chakra UI för styling och Framer Motion för animationer. Jag använde också Recoil istället för React context.",
+        text1: "",
         text2: "JavaScript, Typescript, Node.js, Express.js, Prisma, SQLite",
         githubLink:
           "https://github.com/orgs/sverok-man-collaboration/repositories",
