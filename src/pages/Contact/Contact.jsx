@@ -10,85 +10,111 @@ import {
   Link,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import { useState } from "react";
 import { language } from "../../Recoil/language/atom";
 import { useRecoilValue } from "recoil";
+import axios from "axios";
 
 function Contact() {
   const languageToggle = useRecoilValue(language);
-  const [formShake, setFormShake] = useState();
-  const [clickToggle, setClickToggle] = useState();
   const bg = useColorModeValue("#24242e", "#414141");
   const color = useColorModeValue("white", "white");
   const colorHeader = useColorModeValue("#373852", "white");
+  const [axiosResponse, setAxiosResponse] = useState("");
+  const [responseColor, setResponseColor] = useState("");
 
-  function handleClick() {
-    setClickToggle(!clickToggle);
-    if (clickToggle) {
-      setFormShake({ rotate: [0, -3, 5, -2, 5, 0] });
-    } else {
-      setFormShake({ rotate: [0, -3, 4, -2, 5, 0] });
-    }
-  }
+  const [formData, setFormData] = useState({
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const { email, subject, message } = formData;
+    axios
+      .post("https://nodemailer-api.onrender.com", { email, subject, message })
+      .then((response) => {
+        setResponseColor("green.500");
+        if (languageToggle === "GB") {
+          setAxiosResponse("Message sent successfully");
+        } else {
+          setAxiosResponse("Meddelande skickad");
+        }
+        setFormData({
+          email: "",
+          subject: "",
+          message: "",
+        });
+        console.log(response);
+      })
+      .catch((error) => {
+        setResponseColor("red.500");
+        if (languageToggle === "GB") {
+          setAxiosResponse("Something went wrong! Try again");
+        } else {
+          setAxiosResponse("Något gick fel! Försök igen");
+        }
+        console.error(error);
+      });
+  };
+
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+  };
 
   return (
     <Box align="center">
       <Heading m="80px 0 50px 0" color={colorHeader} align="center">
         {languageToggle === "GB" ? "Contact form" : "Kontaktformulär"}
       </Heading>
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{
-          duration: 1,
-          ease: "easeIn",
-          type: "spring",
-        }}
-      >
-        <motion.div
-          onClick={handleClick}
-          animate={formShake}
-          transition={{ duration: 0.3 }}
-        >
-          <Box bg={bg} maxW="375px" p="30px" m="35px 20px 20px 20px" color={color}>
-            <FormControl isDisabled>
-              <FormLabel>
-                {languageToggle === "GB" ? "Email*" : "Epost*"}
-              </FormLabel>
-              <Input type="email" mb="20px" />
-              <FormLabel>
-                {languageToggle === "GB" ? "Subject*" : "Ämne*"}
-              </FormLabel>
-              <Input type="text" mb="20px" />
-              <FormLabel>
-                {languageToggle === "GB" ? "Message*" : "Meddelande*"}
-              </FormLabel>
-              <Textarea type="text" resize="vertical" h="180px" mb="20px" />
-              <Button isDisabled type="submit" w="100%">
-                {languageToggle === "GB" ? "Submit*" : "Skicka*"}
-              </Button>
-            </FormControl>
-          </Box>
-        </motion.div>
-      </motion.div>
+      <Box bg={bg} maxW="375px" p="30px" m="35px 20px 20px 20px" color={color}>
+        <form onSubmit={handleSubmit}>
+          <FormControl>
+            <FormLabel>
+              {languageToggle === "GB" ? "Email*" : "Epost*"}
+            </FormLabel>
+            <Input
+              isRequired
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              mb="20px"
+            />
+            <FormLabel>
+              {languageToggle === "GB" ? "Subject*" : "Ämne*"}
+            </FormLabel>
+            <Input
+              isRequired
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              mb="20px"
+            />
+            <FormLabel>
+              {languageToggle === "GB" ? "Message*" : "Meddelande*"}
+            </FormLabel>
+            <Textarea
+              isRequired
+              type="text"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              resize="vertical"
+              h="180px"
+              mb="20px"
+            />
+            <Button type="submit" w="100%">
+              {languageToggle === "GB" ? "Submit" : "Skicka"}
+            </Button>
+          </FormControl>
+        </form>
+      </Box>
       <Box>
-        <Heading color="orange.500" m="30px 0 20px 0">
-          {languageToggle === "GB"
-            ? "API in development!"
-            : "API under utveckling!"}
-        </Heading>
-        <Text m="0 10px 0 10px">
-          {languageToggle === "GB"
-            ? "The contact form is currently not working."
-            : "Kontaktformuläret fungerar inte för tillfället."}
-        </Text>
-        <Text m="0 13px 0 13px">
-          {languageToggle === "GB"
-            ? "Contact me through this email:"
-            : "Kontakta mig via den här epostadressen:"}
-
-          <Link href="mailto:timabloom@proton.me">timabloom@proton.me</Link>
+        <Text color={responseColor} fontSize="2xl" m="30px 0 20px 0">
+          {axiosResponse}
         </Text>
       </Box>
     </Box>
