@@ -7,7 +7,6 @@ import {
   Textarea,
   Heading,
   Text,
-  Link,
   useColorModeValue,
 } from "@chakra-ui/react";
 import { useState } from "react";
