@@ -26,7 +26,7 @@ function DownloadResume() {
         {languageToggle === "GB" ? "My Resume" : "Mitt CV"}
       </Heading>
       <Link
-        align={!mobileSize ? "center" : ""}
+        textAlign={!mobileSize ? "center" : ""}
         color={color}
         _hover={{ textDecor: "none" }}
         href={pdf}
