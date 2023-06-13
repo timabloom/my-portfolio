@@ -1,28 +1,25 @@
-import { Box, Image as ChakraImage, Text, Flex, useMediaQuery } from "@chakra-ui/react";
+import {
+  Box,
+  Image as ChakraImage,
+  Text,
+  Flex,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import typingGif from "../../assets/typing.gif";
 import { useRecoilValue } from "recoil";
 import { language } from "../../Recoil/language/atom";
-import { useEffect, useState } from "react";
 
-function GifAnimation() {
+function GifAnimation({ onLoad }) {
   const languageToggle = useRecoilValue(language);
   const [laptopSize] = useMediaQuery("(min-width: 1080px)");
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const img = new window.Image();
-    img.src = typingGif;
-    img.onload = () => setLoading(true);
-  }, []);
 
   return (
     <Box w="45%">
-      {loading && (
-        <ChakraImage
-          alt="Animation of me typing on a keyboard"
-          src={typingGif}
-        ></ChakraImage>
-      )}
+      <ChakraImage
+        alt="Animation of me typing on a keyboard"
+        src={typingGif}
+        onLoad={onLoad}
+      ></ChakraImage>
       <Flex justifyContent="flex-end">
         {laptopSize && (
           <Text pos="absolute" m="5px">
