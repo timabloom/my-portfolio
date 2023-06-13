@@ -38,24 +38,36 @@ function Project(props) {
         direction={tabletSize ? "rows" : "column"}
         justify="space-between"
         color="white"
-        p="30px"
+        p="40px"
         pl={tabletSize ? "80px" : "30px"}
         m="50px 0 0 0"
         mb={props.endOfList}
         bg={bg}
       >
         <Box flex={1} pr={tabletSize ? "50px" : "0"}>
-          <Heading>{props.project.heading}</Heading>
-          <Text fontSize="lg" mt="10px">
+          <Flex>
+            <Heading>{props.project.heading}</Heading>
+            {props.project.subHeading && (
+              <Text alignSelf="center" ml="15px" mt="5px" color="tomato">
+                {props.project.subHeading}
+              </Text>
+            )}
+          </Flex>
+          <Text fontSize="lg" mt="20px">
             {props.project.text1}
           </Text>
-          <Box mt="8px" fontSize="lg">
+          {props.project.text2 && (
+            <Text fontSize="lg" mt="10px">
+              {props.project.text2}
+            </Text>
+          )}
+          <Box mt="20px" fontSize="lg">
             <Text color="yellow.500" display="inline">
               {languageToggle === "GB"
                 ? "Technologies Used: "
                 : "Använda tekniker: "}
             </Text>
-            {props.project.text2}
+            {props.project.technologies}
           </Box>
         </Box>
         <Flex
