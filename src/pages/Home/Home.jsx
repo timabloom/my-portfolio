@@ -33,7 +33,8 @@ function Home() {
   };
 
   useEffect(() => {
-    if (isGifLoaded) {
+    if (!phoneSize) {
+      handleGifLoad();
     }
   }, [isGifLoaded]);
 
@@ -48,7 +49,7 @@ function Home() {
           {tabletSizeMax && (
             <Flex justify={phoneSize ? "space-between" : "center"}>
               <Flex direction="column" justify="space-between">
-                <TextAnimation />
+                <TextAnimation onLoad={isGifLoaded} />
                 <TechStack />
               </Flex>
               {phoneSize && <GifAnimation />}
@@ -59,7 +60,7 @@ function Home() {
             direction="column"
             justifyContent="space-between"
           >
-            {tabletSize && <TextAnimation />}
+            {tabletSize && <TextAnimation onLoad={isGifLoaded} />}
             <Box>
               {tabletSize && <TechStack />}
               <Flex
