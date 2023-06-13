@@ -38,7 +38,7 @@ function Home() {
   }, [isGifLoaded]);
 
   return (
-    <Box display={isGifLoaded ? "flex" : "none"}>
+    <Box visibility={isGifLoaded ? "visible" : "hidden"}>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
