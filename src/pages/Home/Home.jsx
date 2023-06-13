@@ -6,6 +6,7 @@ import {
   Button,
   Link,
   useColorModeValue,
+  useAccordionItemState,
 } from "@chakra-ui/react";
 import TextAnimation from "./TextAnimation";
 import TechStack from "./TechStack";
@@ -23,6 +24,7 @@ function Home() {
   const [tabletSize] = useMediaQuery("(min-width: 1080px)");
   const [tabletSizeMax] = useMediaQuery("(max-width: 1079px)");
   const [phoneSize] = useMediaQuery("(min-width: 770px)");
+  const [maxPhoneSize] = useMediaQuery("(max-width: 770px)");
   const [laptopSize] = useMediaQuery("(min-width: 1250px)");
   const bg = useColorModeValue("#24242e", "#414141");
   const [isGifLoaded, setIsGifLoaded] = useState(false);
@@ -33,13 +35,13 @@ function Home() {
   };
 
   useEffect(() => {
-    if (!phoneSize) {
-      handleGifLoad();
+    if (maxPhoneSize) {
+      setIsGifLoaded(true);
     }
-  }, [isGifLoaded]);
+  })
 
   return (
-    <Box display={isGifLoaded ? "block" : "none"}>
+    <Box visibility={isGifLoaded ? "visible" : "hidden"}>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -49,10 +51,10 @@ function Home() {
           {tabletSizeMax && (
             <Flex justify={phoneSize ? "space-between" : "center"}>
               <Flex direction="column" justify="space-between">
-                <TextAnimation onLoad={isGifLoaded} />
+                <TextAnimation onLoad={isGifLoaded}/>
                 <TechStack />
               </Flex>
-              {phoneSize && <GifAnimation />}
+              {phoneSize && <GifAnimation onLoad={handleGifLoad} />}
             </Flex>
           )}
           <Flex

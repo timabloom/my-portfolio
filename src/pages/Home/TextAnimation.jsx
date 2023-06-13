@@ -115,7 +115,7 @@ function TextAnimation({ onLoad }) {
         setTextMarkerAnimation(<Text display="none" />);
       }
     }
-  }, [languageToggle, onLoad]);
+  }, [onLoad, languageToggle]);
 
   return (
     <Box
