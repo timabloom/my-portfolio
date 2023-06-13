@@ -6,7 +6,6 @@ import {
   Button,
   Link,
   useColorModeValue,
-  useAccordionItemState,
 } from "@chakra-ui/react";
 import TextAnimation from "./TextAnimation";
 import TechStack from "./TechStack";
@@ -23,8 +22,8 @@ function Home() {
   const [desktopSize] = useMediaQuery("(min-width: 1500px)");
   const [tabletSize] = useMediaQuery("(min-width: 1080px)");
   const [tabletSizeMax] = useMediaQuery("(max-width: 1079px)");
-  const [phoneSize] = useMediaQuery("(min-width: 770px)");
-  const [maxPhoneSize] = useMediaQuery("(max-width: 770px)");
+  const [phoneSize] = useMediaQuery("(min-width: 800px)");
+  const [maxPhoneSize] = useMediaQuery("(max-width: 800px)");
   const [laptopSize] = useMediaQuery("(min-width: 1250px)");
   const bg = useColorModeValue("#24242e", "#414141");
   const [isGifLoaded, setIsGifLoaded] = useState(false);

@@ -5,7 +5,7 @@ import {
   Flex,
   useMediaQuery,
 } from "@chakra-ui/react";
-import typingGif from "../../assets/typing.gif";
+import typingAnimation from "../../assets/typing.webp";
 import { useRecoilValue } from "recoil";
 import { language } from "../../Recoil/language/atom";
 
@@ -17,7 +17,7 @@ function GifAnimation({ onLoad }) {
     <Box w="45%">
       <ChakraImage
         alt="Animation of me typing on a keyboard"
-        src={typingGif}
+        src={typingAnimation}
         onLoad={onLoad}
       ></ChakraImage>
       <Flex justifyContent="flex-end">
