@@ -9,7 +9,7 @@ import typingAnimation from "../../assets/typing.webp";
 import { useRecoilValue } from "recoil";
 import { language } from "../../Recoil/language/atom";
 
-function GifAnimation({ onLoad }) {
+function GifAnimation() {
   const languageToggle = useRecoilValue(language);
   const [laptopSize] = useMediaQuery("(min-width: 1080px)");
 
@@ -18,7 +18,6 @@ function GifAnimation({ onLoad }) {
       <ChakraImage
         alt="Animation of me typing on a keyboard"
         src={typingAnimation}
-        onLoad={onLoad}
       ></ChakraImage>
       <Flex justifyContent="flex-end">
         {laptopSize && (
