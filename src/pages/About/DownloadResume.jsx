@@ -5,7 +5,8 @@ import {
   Heading,
   useMediaQuery,
 } from "@chakra-ui/react";
-import pdf from "../../documents/Timothy_Magee_CV.pdf";
+import pdfSE from "../../documents/Timothy_Magee_CV_SE.pdf";
+import pdfEN from "../../documents/Timothy_Magee_CV_EN.pdf";
 import { DownloadIcon } from "@chakra-ui/icons";
 import { useRecoilValue } from "recoil";
 import { language } from "../../Recoil/language/atom";
@@ -29,7 +30,7 @@ function DownloadResume() {
         textAlign={!mobileSize ? "center" : ""}
         color={color}
         _hover={{ textDecor: "none" }}
-        href={pdf}
+        href={languageToggle === "GB" ? pdfEN : pdfSE}
         download="Timothy_Magee_CV.pdf"
       >
         <Button fontSize="sm" mt="10px">
