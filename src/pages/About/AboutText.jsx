@@ -32,7 +32,7 @@ function AboutText() {
             p={mobileSize ? "0 50px 20px 50px" : "30px 0 20px 0"}
           >
             Hello there! My name is Timothy Magee, a passionate frontend
-            developer based in the beautiful Uppsala, Sweden. With a strong
+            developer based in the beautiful Vaberg, Sweden. With a strong
             drive for constant learning and growth, I am currently exploring new
             opportunities to grow and make meaningful contributions within the
             tech industry
@@ -73,7 +73,7 @@ function AboutText() {
             p={mobileSize ? "0 50px 20px 50px" : "30px 0 20px 0"}
           >
             Hej där! Mitt namn är Timothy Magee, en passionerad
-            frontend-utvecklare baserad i vackra Uppsala, Sverige. Med en stark
+            frontend-utvecklare baserad i vackra Varberg, Sverige. Med en stark
             drivkraft för att ständigt lära och utvecklas, jag är för närvarande
             på jakt efter nya möjligheter att växa och göra betydelsefulla
             bidrag inom teknikvärlden.
