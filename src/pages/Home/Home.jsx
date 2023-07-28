@@ -118,8 +118,8 @@ function Home() {
                 <Flex justify="flex-end">
                   <Text pos="absolute" m="5px" mr={!phoneSize && "20px"}>
                     {languageToggle === "GB"
-                      ? "Last updated: 17-07-2023"
-                      : "Senast uppdaterad: 17-07-2023"}
+                      ? "Last updated: 28-07-2023"
+                      : "Senast uppdaterad: 28-07-2023"}
                   </Text>
                 </Flex>
               )}
