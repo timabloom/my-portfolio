@@ -53,6 +53,7 @@ export default function projectInfo(language, project) {
     } else if (project === 4) {
       return {
         heading: "Chatty Chatty Bang Bang",
+        subHeading: "(changing servers)",
         text1:
           "Chatty Chatty Bang Bang is a real-time chat application built for a course about web servers and databases. The purpose of the assignment was to learn how to create an API using Express. I also connected a database on Heroku to my API. This app lets you chat with others by creating or joining a room. Rooms are removed when no one is occupying them. As an option, you can create a name for yourself; otherwise, a random name is given. Emojis and private messages are also possible to send in the rooms.",
         technologies:
@@ -133,6 +134,7 @@ export default function projectInfo(language, project) {
     } else if (project === 4) {
       return {
         heading: "Chatty Chatty Bang Bang",
+        subHeading: "(byter servrar)",
         text1:
           "Chatty Chatty Bang Bang är en chattapplikation som fungerar i realtid, jag gjorde den när jag läste en kurs om webbservrar och databaser. Syftet med uppdraget var att lära sig hur man skapar ett API med hjälp av Express. Jag kopplade också en databas på heroku till mitt API. I den här appen kan du chatta med andra genom att skapa ett rum eller gå med i ett rum. Ett rum raderas om det inte finns någon i rummet. Du har möljlighet att skapa ett namn åt dig själv, annars får du ett slumpmässigt namn. Det är även möjligt att skicka emojis och privata meddelanden i rummen.",
         technologies:
