@@ -25,7 +25,6 @@ export default function projectInfo(language, project) {
     } else if (project === 2) {
       return {
         heading: "Kalejdoskop API",
-        subHeading: "(in development)",
         text1:
           "This project is part of my internship at Sverok and MÄN. I ventured into backend for this project due to the need of the organizations by creating an Express application. I also worked with and took on a leadership role leading a small team of two other students in developing a website, admin panel and the express application. The website, adminpanel and api are all made for a game called Kalejdoskop.",
         text2:
@@ -105,7 +104,6 @@ export default function projectInfo(language, project) {
     } else if (project === 2) {
       return {
         heading: "Kalejdoskop API",
-        subHeading: "(under utveckling)",
         text1:
           "Detta projekt utgör en del av min praktik hos Sverok och MÄN. Trots att jag huvudsakligen är inriktad på frontend-utveckling, fann jag mig själv äventyra in i backend-teknologier för att möta organisationernas behov. Här utvecklade jag en Express-applikation. Utöver detta, tog jag även på mig en ledarroll där jag styrde ett litet team bestående av två andra studenter. Tillsammans skapade vi en webbplats, en adminpanel och Express-applikationen. Alla dessa element är specifikt utformade för ett spel som heter Kalejdoskop.",
 
