@@ -54,7 +54,19 @@ function TechStack() {
           fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
           colorScheme="yellow"
         >
-          JS
+          JavaScript
+        </Badge>
+        <Badge
+          fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
+          colorScheme="blue"
+        >
+          TypeScript
+        </Badge>
+        <Badge
+          fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
+          colorScheme="orange"
+        >
+          Svelte
         </Badge>
         <Badge
           fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
@@ -66,7 +78,7 @@ function TechStack() {
           fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
           colorScheme="orange"
         >
-          Node
+          Node.js
         </Badge>
         <Badge
           fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
@@ -78,7 +90,7 @@ function TechStack() {
           fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
           colorScheme="pink"
         >
-          SQL
+          SQLite
         </Badge>
       </HStack>
     </Box>
