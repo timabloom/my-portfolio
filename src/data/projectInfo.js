@@ -1,13 +1,28 @@
 import portfolioWebsiteDark from "../assets/portfolio-website-dark.png";
-import chatWebsite from "../assets/chat-website.png";
 import catImagesWebsite from "../assets/cat-images-website.png";
 import yahtzeeWebsite from "../assets/yahtzee-website.png";
 import tarotSanctuaryWebsite from "../assets/tarot-sanctuary-website.png";
 import kalejdoskopApi from "../assets/kalejdoskop-api.png";
+import habitTrackerApp from "../assets/habit-tracker-app.png";
 
 export default function projectInfo(language, project) {
   if (language === "GB") {
     if (project === 1) {
+      return {
+        heading: "Habit Tracker",
+        subHeading: "(in development)",
+        text1:
+          "",
+
+        text2:
+          "",
+        technologies: "TypeScript, React, Tailwind, DaisyUI",
+        githubLink: "https://github.com/timabloom/habit-replacer-tracker",
+        website: "https://habit-replacer-tracker.onrender.com/",
+        image: habitTrackerApp,
+        hash: "L7F~Krt700Io-:ayIVj[00WV~Woe",
+      };
+    } else if (project === 2) {
       return {
         heading: "Tarot Sanctuary",
         subHeading: "(in development)",
@@ -22,7 +37,7 @@ export default function projectInfo(language, project) {
         image: tarotSanctuaryWebsite,
         hash: "L8N^YrR,_N%100s.DiNH00ofD%R*",
       };
-    } else if (project === 2) {
+    } else if (project === 3) {
       return {
         heading: "Kalejdoskop API",
         text1:
@@ -38,7 +53,7 @@ export default function projectInfo(language, project) {
         image: kalejdoskopApi,
         hash: "L02r,NxuDiD%-;ofIUM{RiRjogxu",
       };
-    } else if (project === 3) {
+    } else if (project === 4) {
       return {
         heading: "My Portfolio",
         text1:
@@ -48,19 +63,6 @@ export default function projectInfo(language, project) {
         website: "https://timothy-magees-portfolio.onrender.com",
         image: portfolioWebsiteDark,
         hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
-      };
-    } else if (project === 4) {
-      return {
-        heading: "Chatty Chatty Bang Bang",
-        subHeading: "(changing servers)",
-        text1:
-          "Chatty Chatty Bang Bang is a real-time chat application built for a course about web servers and databases. The purpose of the assignment was to learn how to create an API using Express. I also connected a database on Heroku to my API. This app lets you chat with others by creating or joining a room. Rooms are removed when no one is occupying them. As an option, you can create a name for yourself; otherwise, a random name is given. Emojis and private messages are also possible to send in the rooms.",
-        technologies:
-          "JavaScript, Node.js, React, Chakra UI, Express.js, Socket.io",
-        githubLink: "https://github.com/cme-timothy/realtime-chat-klient",
-        website: "https://timothys-realtime-chat-klient.herokuapp.com",
-        image: chatWebsite,
-        hash: "U9S~w]?ISc~Bx^WEoys.nVNYxHI:^+NZ%2NG",
       };
     } else if (project === 5) {
       return {
@@ -89,6 +91,21 @@ export default function projectInfo(language, project) {
   } else {
     if (project === 1) {
       return {
+        heading: "Habit Tracker",
+        subHeading: "(under utveckling)",
+        text1:
+          "",
+
+        text2:
+          "",
+        technologies: "TypeScript, React, Tailwind, DaisyUI",
+        githubLink: "https://github.com/timabloom/habit-replacer-tracker",
+        website: "https://habit-replacer-tracker.onrender.com/",
+        image: habitTrackerApp,
+        hash: "L7F~Krt700Io-:ayIVj[00WV~Woe",
+      };
+    } else if (project === 2) {
+      return {
         heading: "Tarot Sanctuary",
         subHeading: "(under utveckling)",
         text1:
@@ -101,7 +118,7 @@ export default function projectInfo(language, project) {
         image: tarotSanctuaryWebsite,
         hash: "L8N^YrR,_N%100s.DiNH00ofD%R*",
       };
-    } else if (project === 2) {
+    } else if (project === 3) {
       return {
         heading: "Kalejdoskop API",
         text1:
@@ -118,7 +135,7 @@ export default function projectInfo(language, project) {
         image: kalejdoskopApi,
         hash: "L02r,NxuDiD%-;ofIUM{RiRjogxu",
       };
-    } else if (project === 3) {
+    } else if (project === 4) {
       return {
         heading: "Min Portfolio",
         text1:
@@ -128,19 +145,6 @@ export default function projectInfo(language, project) {
         website: "https://timothy-magees-portfolio.onrender.com",
         image: portfolioWebsiteDark,
         hash: "UCDb~F00og~UxZbcae%L0K~VNGRjx]IUt7WC",
-      };
-    } else if (project === 4) {
-      return {
-        heading: "Chatty Chatty Bang Bang",
-        subHeading: "(byter servrar)",
-        text1:
-          "Chatty Chatty Bang Bang är en chattapplikation som fungerar i realtid, jag gjorde den när jag läste en kurs om webbservrar och databaser. Syftet med uppdraget var att lära sig hur man skapar ett API med hjälp av Express. Jag kopplade också en databas på heroku till mitt API. I den här appen kan du chatta med andra genom att skapa ett rum eller gå med i ett rum. Ett rum raderas om det inte finns någon i rummet. Du har möljlighet att skapa ett namn åt dig själv, annars får du ett slumpmässigt namn. Det är även möjligt att skicka emojis och privata meddelanden i rummen.",
-        technologies:
-          "JavaScript, Node.js, React, Chakra UI, Express.js, Socket.io",
-        githubLink: "https://github.com/cme-timothy/realtime-chat-klient",
-        website: "https://timothys-realtime-chat-klient.herokuapp.com",
-        image: chatWebsite,
-        hash: "U9S~w]?ISc~Bx^WEoys.nVNYxHI:^+NZ%2NG",
       };
     } else if (project === 5) {
       return {
