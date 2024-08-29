@@ -27,8 +27,8 @@ function TechStack() {
         color={colorHeader}
       >
         {languageToggle === "GB"
-          ? "Frontend Programmer"
-          : "Frontend-programmerare"}
+          ? "Full-Stack Programmer"
+          : "Fullstack-utvecklare"}
       </Text>
       <HStack
         gap="5px 10px"
@@ -39,12 +39,24 @@ function TechStack() {
       >
         <Badge
           fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
+          colorScheme="blue"
+        >
+          .NET
+        </Badge>
+        <Badge
+          fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
+          colorScheme="orange"
+        >
+          C#
+        </Badge>
+        <Badge
+          fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
           colorScheme="green"
         >
           HTML
         </Badge>
         <Badge
-        ml="0"
+          ml="0"
           fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
           colorScheme="red"
         >
@@ -91,6 +103,18 @@ function TechStack() {
           colorScheme="pink"
         >
           SQLite
+        </Badge>
+        <Badge
+          fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
+          colorScheme="blue"
+        >
+          Microsoft SQL Server
+        </Badge>
+        <Badge
+          fontSize={desktopSize ? "2xl" : laptopSizeFont ? "xl" : "lg"}
+          colorScheme="green"
+        >
+          PostgreSQL
         </Badge>
       </HStack>
     </Box>

@@ -9,7 +9,6 @@ import {
   Box,
 } from "@chakra-ui/react";
 import Photo from "./Photo";
-import DownloadResume from "./DownloadResume";
 
 function AboutText() {
   const languageToggle = useRecoilValue(language);
@@ -32,7 +31,7 @@ function AboutText() {
             p={mobileSize ? "0 50px 20px 50px" : "30px 0 20px 0"}
           >
             Hello there! My name is Timothy Magee, a passionate frontend
-            developer based in the beautiful Vaberg, Sweden. With a strong
+            developer based in the beautiful Uppsala, Sweden. With a strong
             drive for constant learning and growth, I am currently exploring new
             opportunities to grow and make meaningful contributions within the
             tech industry
@@ -73,7 +72,7 @@ function AboutText() {
             p={mobileSize ? "0 50px 20px 50px" : "30px 0 20px 0"}
           >
             Hej där! Mitt namn är Timothy Magee, en passionerad
-            frontend-utvecklare baserad i vackra Varberg, Sverige. Med en stark
+            frontend-utvecklare baserad i vackra Uppsala, Sverige. Med en stark
             drivkraft för att ständigt lära och utvecklas, jag är för närvarande
             på jakt efter nya möjligheter att växa och göra betydelsefulla
             bidrag inom teknikvärlden.
@@ -117,13 +116,18 @@ function AboutText() {
       </Text>
       <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
         {languageToggle === "GB"
-          ? "Programing Languages: HTML, CSS, JavaScript, TypeScript, SQL"
-          : "Programmeringsspråk: HTML, CSS, JavaScript, TypeScript, SQL"}
+          ? "Programing Languages: C#, HTML, CSS, JavaScript, TypeScript, SQL"
+          : "Programmeringsspråk: C#, HTML, CSS, JavaScript, TypeScript, SQL"}
       </Text>
       <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
         {languageToggle === "GB"
           ? "Version Control Software: Git"
           : "Versionshanteringsprogram: Git"}
+      </Text>
+      <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
+        {languageToggle === "GB"
+          ? "Software Development Framework: .NET"
+          : "Programmeringsramverk: .NET"}
       </Text>
       <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
         {languageToggle === "GB"
@@ -147,10 +151,14 @@ function AboutText() {
       </Text>
       <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
         {languageToggle === "GB"
+          ? "Databases: Microsoft SQL Server, PostgreSQL, SQLite"
+          : "Databaser: Microsoft SQL Server, PostgreSQL, SQLite"}
+      </Text>
+      <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
+        {languageToggle === "GB"
           ? "Cloud Services: GitHub, Netlify, Heroku, Render"
           : "Molntjänster: GitHub, Netlify, Heroku, Render"}
       </Text>
-      {!mobileSize && <DownloadResume />}
     </Flex>
   );
 }

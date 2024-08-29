@@ -37,7 +37,7 @@ function Home() {
     if (maxPhoneSize) {
       setIsGifLoaded(true);
     }
-  })
+  }, [maxPhoneSize]);
 
   return (
     <Box visibility={isGifLoaded ? "visible" : "hidden"}>
@@ -118,8 +118,8 @@ function Home() {
                 <Flex justify="flex-end">
                   <Text pos="absolute" m="5px" mr={!phoneSize && "20px"}>
                     {languageToggle === "GB"
-                      ? "Last updated: 28-07-2023"
-                      : "Senast uppdaterad: 28-07-2023"}
+                      ? "Last updated: 29-08-2024"
+                      : "Senast uppdaterad: 29-08-2024"}
                   </Text>
                 </Flex>
               )}

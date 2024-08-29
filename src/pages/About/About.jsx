@@ -5,7 +5,6 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Photo from "./Photo";
-import DownloadResume from "./DownloadResume";
 import AboutText from "./AboutText";
 
 function About() {
@@ -23,7 +22,6 @@ function About() {
           {mobileSize && (
             <Flex direction="column" flex={1} m="80px 0 30px 0">
               <Photo />
-              <DownloadResume />
             </Flex>
           )}
           <AboutText />
