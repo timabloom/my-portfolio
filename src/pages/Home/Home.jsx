@@ -50,7 +50,7 @@ function Home() {
           {tabletSizeMax && (
             <Flex justify={phoneSize ? "space-between" : "center"}>
               <Flex direction="column" justify="space-between">
-                <TextAnimation onLoad={isGifLoaded}/>
+                <TextAnimation onLoad={isGifLoaded} />
                 <TechStack />
               </Flex>
               {phoneSize && <GifAnimation onLoad={handleGifLoad} />}
@@ -73,10 +73,10 @@ function Home() {
                   desktopSize
                     ? "85px 0 85px 0"
                     : tabletSize
-                    ? "5.5vw 0 5.5vw 0"
-                    : phoneSize
-                    ? "85px 0 85px 0"
-                    : "50px 35px 50px 35px"
+                      ? "5.5vw 0 5.5vw 0"
+                      : phoneSize
+                        ? "85px 0 85px 0"
+                        : "50px 35px 50px 35px"
                 }
                 color="white"
                 bg={bg}
@@ -86,18 +86,14 @@ function Home() {
                     fontSize="xl"
                     ml={laptopSize ? "80px" : phoneSize ? "6vw" : "0"}
                   >
-                    This portfolio is my first larger project outside of school.
-                    I hope you like it. Other projects I have built can be found
-                    under projects.
+                    I invite you to take a closer look at my portfolio, where I showcase a variety of projects that highlight my skills and creativity.
                   </Text>
                 ) : (
                   <Text
                     fontSize="xl"
                     ml={laptopSize ? "80px" : phoneSize ? "6vw" : "0"}
                   >
-                    Den här portfolion är mitt första större projekt utanför
-                    skolan. Jag hoppas du tycker om den. Andra projekt jag har
-                    byggt finns under projekt.
+                    Jag bjuder in dig att ta en närmare titt på min portfolio, där jag visar upp en mängd projekt som framhäver mina färdigheter och min kreativitet.
                   </Text>
                 )}
                 <Flex ml="30px" mr={desktopSize ? "40px" : "2.5vw"}>
