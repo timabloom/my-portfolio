@@ -9,14 +9,14 @@ export default function projectInfo(language, project) {
   if (language === "GB") {
     if (project === 1) {
       return {
-        heading: "Habit Tracker",
+        heading: "Habit Replacer",
         subHeading: "(in development)",
         text1:
-          "",
+          "Habit Replacer is an innovative habit tracking application designed to help users effectively replace old habits with new, positive ones. Understanding that the memory of old habits lingers, this app encourages users to cultivate beneficial behaviors by tracking both their old and new habits. With a visually appealing interface built in React, styled with Tailwind CSS and Daisy UI, users can easily log their progress and stay motivated. The integration of Recharts allows for clear visualizations of their journey, providing valuable insights into behavior patterns and helping users see their progress over time.",
 
         text2:
-          "",
-        technologies: "TypeScript, React, Tailwind, DaisyUI",
+          "On the technical side, Habit Replacer utilizes an ASP.NET Core API for data retrieval and storage, with plans to transition to a SQL database using Entity Framework for efficient data management. Future enhancements will include user authentication, allowing individuals to create personal accounts for a tailored experience. This project not only serves as a powerful tool for personal development but also represents a significant learning opportunity in modern web development technologies.",
+        technologies: "TypeScript, React, Tailwind, DaisyUI, ASP.NET Core, C#",
         githubLink: "https://github.com/timabloom/habit-replacer-tracker",
         website: "https://habit-replacer-tracker.onrender.com/",
         image: habitTrackerApp,
@@ -91,14 +91,14 @@ export default function projectInfo(language, project) {
   } else {
     if (project === 1) {
       return {
-        heading: "Habit Tracker",
+        heading: "Habit Replacer",
         subHeading: "(under utveckling)",
         text1:
-          "",
+          "Habit Replacer är en innovativ vanehanteringsapplikation utformad för att hjälpa användare att effektivt ersätta gamla vanor med nya, positiva sådana. Med förståelsen att minnet av gamla vanor kvarstår, uppmuntrar denna app användare att odla fördelaktiga beteenden genom att spåra både deras gamla och nya vanor. Med ett visuellt tilltalande gränssnitt byggt i React, stylat med Tailwind CSS och Daisy UI, kan användare enkelt logga sina framsteg och hålla motivationen uppe. Integrationen av Recharts möjliggör tydliga visualiseringar av deras resa, vilket ger värdefulla insikter i beteendemönster och hjälper användare att se sina framsteg över tid.",
 
         text2:
-          "",
-        technologies: "TypeScript, React, Tailwind, DaisyUI",
+          "På den tekniska sidan använder Habit Replacer ett ASP.NET Core API för datahämtning och lagring, med planer på att övergå till en SQL-databas med Entity Framework för effektiv datahantering. Framtida förbättringar kommer att inkludera användarautentisering, vilket gör det möjligt för individer att skapa personliga konton för en skräddarsydd upplevelse. Detta projekt fungerar inte bara som ett kraftfullt verktyg för personlig utveckling utan representerar också en betydande läromöjlighet inom moderna webbutvecklingsteknologier.",
+        technologies: "TypeScript, React, Tailwind, DaisyUI, ASP.NET Core, C#",
         githubLink: "https://github.com/timabloom/habit-replacer-tracker",
         website: "https://habit-replacer-tracker.onrender.com/",
         image: habitTrackerApp,
