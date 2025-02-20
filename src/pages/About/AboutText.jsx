@@ -64,7 +64,7 @@ function AboutText() {
             bidrag inom teknikvärlden."
           />
           <AboutParagraph
-            paragraph="Min resa inom programmering har varit allt annat än traditionell. Med en stark vilja att hjälpa andra övervägde jag först en karriär som socionom. Men livet tog en oväntad vändning, och det var då jag upptäckte min sanna passion – programmering."
+            paragraph="Min resa inom programmering har varit allt annat än traditionell. Med en stark vilja att hjälpa andra övervägde jag först en karriär som socionom. Men livet tog en oväntad vändning, och det var då jag upptäckte min sanna passion för programmering."
           />
           <AboutParagraph
             paragraph="Nu när jag upptäckt att min kreativitet verkligen blomstrar inom
