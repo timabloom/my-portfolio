@@ -9,6 +9,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 import Photo from "./Photo";
+import AboutParagraph from "./AboutParagraph";
 
 function AboutText() {
   const languageToggle = useRecoilValue(language);
@@ -26,85 +27,57 @@ function AboutText() {
       {!mobileSize && <Photo />}
       {languageToggle === "GB" ? (
         <Box maxW="1000px">
-          <Text
-            fontSize="xl"
-            p={mobileSize ? "0 50px 20px 50px" : "30px 0 20px 0"}
-          >
-            Hello there! My name is Timothy Magee, a passionate frontend
-            developer based in the beautiful Uppsala, Sweden. With a strong
+          <AboutParagraph
+            paragraph="Hello there! My name is Timothy Magee, a passionate Full Stack
+            Developer based in the beautiful Uppsala, Sweden. With a strong
             drive for constant learning and growth, I am currently exploring new
             opportunities to grow and make meaningful contributions within the
-            tech industry
-          </Text>
-          <Text
-            fontSize="xl"
-            p={mobileSize ? "0 50px 20px 50px" : "0px 0 20px 0"}
-          >
-            My journey into development didn't start in the most conventional
+            tech industry."
+          />
+          <AboutParagraph
+            paragraph="My journey into development didn't start in the most conventional
             way. I've always had a strong desire to help others, which initially
             led me to consider a career in social work. However, life had
             different plans, and I discovered my true passion lies in
-            programming.
-          </Text>
-          <Text
-            fontSize="xl"
-            p={mobileSize ? "0 50px 20px 50px" : "0px 0 20px 0"}
-          >
-            Now when I have found out that my creativity truly flourishes within
+            programming."
+          />
+          <AboutParagraph
+            paragraph="Now when I have found out that my creativity truly flourishes within
             programming. With the technical skills I've acquired, I feel that I
             have the tools to bring my visions to life and create solutions that
             make a difference. The freedom and satisfaction I feel when
-            programming are unparalleled.
-          </Text>
-          <Text
-            fontSize="xl"
-            p={mobileSize ? "0 50px 20px 50px" : "0px 0 20px 0"}
-          >
-            I am excited about taking my skills to the next level and helping
+            programming are unparalleled."
+          />
+          <AboutParagraph
+            paragraph="I am excited about taking my skills to the next level and helping
             your team create innovative and meaningful solutions. Let's create
             something amazing together!"
-          </Text>
+          />
         </Box>
       ) : (
         <Box maxW="1000px">
-          <Text
-            fontSize="xl"
-            p={mobileSize ? "0 50px 20px 50px" : "30px 0 20px 0"}
-          >
-            Hej där! Mitt namn är Timothy Magee, en passionerad
-            frontend-utvecklare baserad i vackra Uppsala, Sverige. Med en stark
-            drivkraft för att ständigt lära och utvecklas, jag är för närvarande
+          <AboutParagraph
+            paragraph="Hej där! Mitt namn är Timothy Magee, en passionerad
+            fullstack-utvecklare i vackra Uppsala. Med en stark
+            drivkraft för att ständigt lära och utvecklas, så är jag för närvarande
             på jakt efter nya möjligheter att växa och göra betydelsefulla
-            bidrag inom teknikvärlden.
-          </Text>
-          <Text
-            fontSize="xl"
-            p={mobileSize ? "0 50px 20px 50px" : "0px 0 20px 0"}
-          >
-            Min resa inom utveckling började inte på det mest konventionella
-            sättet. Jag har alltid haft en stark vilja att hjälpa andra, vilket
-            ledde mig till att ursprungligen överväga en karriär som socionom.
-            Men livet hade andra planer, och jag upptäckte min sanna passion för
-            programmering.
-          </Text>
-          <Text
-            fontSize="xl"
-            p={mobileSize ? "0 50px 20px 50px" : "0px 0 20px 0"}
-          >
-            Nu när jag upptäckt att min kreativitet verkligen blomstrar inom
-            programmering. Med de tekniska färdigheter jag har förvärvat, känner
+            bidrag inom teknikvärlden."
+          />
+          <AboutParagraph
+            paragraph="Min resa inom programmering har varit allt annat än traditionell. Med en stark vilja att hjälpa andra övervägde jag först en karriär som socionom. Men livet tog en oväntad vändning, och det var då jag upptäckte min sanna passion – programmering."
+          />
+          <AboutParagraph
+            paragraph="Nu när jag upptäckt att min kreativitet verkligen blomstrar inom
+            programmering och med de tekniska färdigheter jag har förvärvat, känner
             jag att jag har verktygen för att förverkliga mina visioner och
             skapa lösningar som gör skillnad. Den frihet och tillfredsställelse
-            jag känner när jag programmerar är oöverträffad.
-          </Text>
-          <Text
-            fontSize="xl"
-            p={mobileSize ? "0 50px 20px 50px" : "0px 0 20px 0"}
-          >
-            Jag ser fram emot att ta mina färdigheter till nästa nivå och att
+            jag känner när jag programmerar är oöverträffad."
+          />
+          <AboutParagraph
+            paragraph="Jag ser fram emot att ta mina färdigheter till nästa nivå och att
             hjälpa ditt team med att skapa innovativa och meningsfulla
-            lösningar. Låt oss skapa något fantastiskt tillsammans!
-          </Text>
+            lösningar. Låt oss skapa något fantastiskt tillsammans!"
+          />
         </Box>
       )}
       <Text
