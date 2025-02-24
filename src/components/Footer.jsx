@@ -21,14 +21,14 @@ function Footer() {
       <Box mb={5} color={color}>
         <Link
           mr={6}
-          href="https://www.linkedin.com/in/timothy-magee-b3170424a/"
+          href="https://www.linkedin.com/in/timothymagee/"
           _hover={{ color: "#0a66c2" }}
         >
           <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
         </Link>
         <Link
           mr={6}
-          href="https://github.com/cme-timothy?tab=repositories/"
+          href="https://github.com/timabloom"
           _hover={{ opacity: "70%" }}
         >
           <FontAwesomeIcon icon={faGithub} size="2x" fixedWidth />
