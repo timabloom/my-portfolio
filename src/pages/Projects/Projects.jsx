@@ -31,7 +31,7 @@ function Projects() {
       </Heading>
       {languageToggle === "GB" ?
         projectsGB.map((project, index) =>
-          <Project key={index} duration={duration} project={project} endOfList={projectsGB.length === index && 0} />
+          <Project key={index} duration={duration = duration + 0.1} project={project} endOfList={projectsGB.length === index && 0} />
         )
         :
         projectsSV.map((project, index) =>
