@@ -109,8 +109,8 @@ function AboutText() {
       </Text>
       <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
         {languageToggle === "GB"
-          ? "Libraries and Frameworks: Svelte, React, Express.js"
-          : "Bibliotek och Ramverk: Svelte, React, Express.js"}
+          ? "Libraries and Frameworks: Svelte, SvelteKit, React, Express.js"
+          : "Bibliotek och Ramverk: Svelte, SvelteKit, React, Express.js"}
       </Text>
       <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
         {languageToggle === "GB"
@@ -119,8 +119,8 @@ function AboutText() {
       </Text>
       <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
         {languageToggle === "GB"
-          ? "Softwares: VS Code, Gimp, Only Office"
-          : "Mjukvaror: VS Code, Gimp, Only Office"}
+          ? "Softwares: VS Code, Figma, Gimp, Only Office"
+          : "Mjukvaror: VS Code, Figma, Gimp, Only Office"}
       </Text>
       <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
         {languageToggle === "GB"
@@ -129,8 +129,8 @@ function AboutText() {
       </Text>
       <Text fontSize="xl" p={mobileSize ? "20px 50px 0 50px" : "20px 0 0 0"}>
         {languageToggle === "GB"
-          ? "Cloud Services: GitHub, Netlify, Heroku, Render"
-          : "Molntjänster: GitHub, Netlify, Heroku, Render"}
+          ? "Cloud Services: GitHub, Azure, Google Cloud, Netlify, Heroku, Render, "
+          : "Molntjänster: GitHub, Azure, Google Cloud, Netlify, Heroku, Render"}
       </Text>
     </Flex>
   );
