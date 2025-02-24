@@ -7,12 +7,13 @@ import {
 import { useRecoilValue } from "recoil";
 import { language } from "../../Recoil/language/atom";
 import Project from "./Project";
-import { default as retrieveText } from "../../data/projectInfo";
+import { projectsGB, projectsSV } from "../../data/projectInfo";
 
 function Projects() {
   const languageToggle = useRecoilValue(language);
   const colorHeader = useColorModeValue("#373852", "white");
   const [tabletSize] = useMediaQuery("(min-width: 1080px)");
+  let duration = 0.9;
 
   return (
     <Flex
@@ -28,16 +29,15 @@ function Projects() {
       >
         {languageToggle === "GB" ? "Projects" : "Projekt"}
       </Heading>
-      <Project duration={1} project={retrieveText(languageToggle, 1)} />
-      <Project duration={1.1} project={retrieveText(languageToggle, 2)} />
-      <Project duration={1.2} project={retrieveText(languageToggle, 3)} />
-      <Project duration={1.3} project={retrieveText(languageToggle, 4)} />
-      <Project duration={1.4} project={retrieveText(languageToggle, 5)} />
-      <Project
-        duration={1.5}
-        project={retrieveText(languageToggle, 6)}
-        endOfList={0}
-      />
+      {languageToggle === "GB" ?
+        projectsGB.map((project, index) =>
+          <Project key={index} duration={duration} project={project} endOfList={projectsGB.length === index && 0} />
+        )
+        :
+        projectsSV.map((project, index) =>
+          <Project key={index} duration={duration = duration + 0.1} project={project} endOfList={projectsGB.length === index && 0} />
+        )
+      }
     </Flex>
   );
 }

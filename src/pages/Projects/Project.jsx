@@ -17,7 +17,7 @@ import { language } from "../../Recoil/language/atom";
 import { Blurhash } from "react-blurhash";
 import { useState } from "react";
 
-function Project(props) {
+function Project({ duration, project, endOfList }) {
   const languageToggle = useRecoilValue(language);
   const bg = useColorModeValue("#24242e", "#414141");
   const [tabletSize] = useMediaQuery("(min-width: 1080px)");
@@ -32,7 +32,7 @@ function Project(props) {
     <motion.div
       initial={{ x: "-100%", opacity: 0 }}
       animate={{ x: 1, opacity: 1 }}
-      transition={{ duration: props.duration, ease: "easeIn", type: "spring" }}
+      transition={{ duration: duration, ease: "easeIn", type: "spring" }}
     >
       <Flex
         direction={tabletSize ? "rows" : "column"}
@@ -41,24 +41,24 @@ function Project(props) {
         p="40px"
         pl={tabletSize ? "80px" : "30px"}
         m="50px 0 0 0"
-        mb={props.endOfList}
+        mb={endOfList}
         bg={bg}
       >
         <Box flex={1} pr={tabletSize ? "50px" : "0"}>
           <Flex>
-            <Heading>{props.project.heading}</Heading>
-            {props.project.subHeading && (
+            <Heading>{project.heading}</Heading>
+            {project.subHeading && (
               <Text alignSelf="center" ml="15px" mt="5px" color="tomato">
-                {props.project.subHeading}
+                {project.subHeading}
               </Text>
             )}
           </Flex>
           <Text fontSize="lg" mt="20px">
-            {props.project.text1}
+            {project.text1}
           </Text>
-          {props.project.text2 && (
+          {project.text2 && (
             <Text fontSize="lg" mt="10px">
-              {props.project.text2}
+              {project.text2}
             </Text>
           )}
           <Box mt="20px" fontSize="lg">
@@ -67,7 +67,7 @@ function Project(props) {
                 ? "Technologies Used: "
                 : "Använda tekniker: "}
             </Text>
-            {props.project.technologies}
+            {project.technologies}
           </Box>
         </Box>
         <Flex
@@ -80,11 +80,11 @@ function Project(props) {
           <Link
             _hover={{ opacity: "70%" }}
             target="blank"
-            href={props.project.website}
+            href={project.website}
           >
             <Flex>
               <Image
-                src={props.project.image}
+                src={project.image}
                 width={mobileSize ? 360 : 275}
                 height={mobileSize ? 280 : 214}
                 loading="lazy"
@@ -98,7 +98,7 @@ function Project(props) {
                   transition={{ duration: 0.4, ease: "easeIn" }}
                 >
                   <Blurhash
-                    hash={props.project.hash}
+                    hash={project.hash}
                     width={mobileSize ? 360 : 275}
                     height={mobileSize ? 280 : 214}
                     resolutionX={32}
@@ -113,13 +113,13 @@ function Project(props) {
             <Link
               m="10px"
               mb="0"
-              href={props.project.githubLink}
+              href={project.githubLink}
               target="_blank"
               _hover={{ opacity: "70%" }}
             >
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </Link>
-            <Link href={props.project.website} target="_blank">
+            <Link href={project.website} target="_blank">
               <ExternalLinkIcon
                 m="10px"
                 mb="0"
