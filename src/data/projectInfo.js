@@ -92,13 +92,12 @@ export default function projectInfo(language, project) {
     if (project === 1) {
       return {
         heading: "Habit Replacer",
-        subHeading: "(under utveckling)",
         text1:
-          "Habit Replacer är en innovativ vanehanteringsapplikation utformad för att hjälpa användare att effektivt ersätta gamla vanor med nya, positiva sådana. Med förståelsen att minnet av gamla vanor kvarstår, uppmuntrar denna app användare att odla fördelaktiga beteenden genom att spåra både deras gamla och nya vanor. Med ett visuellt tilltalande gränssnitt byggt i React, stylat med Tailwind CSS och Daisy UI, kan användare enkelt logga sina framsteg och hålla motivationen uppe. Integrationen av Recharts möjliggör tydliga visualiseringar av deras resa, vilket ger värdefulla insikter i beteendemönster och hjälper användare att se sina framsteg över tid.",
+          "Habit Replacer är en innovativ vanehanteringsapplikation utformad för att hjälpa användare att effektivt ersätta gamla vanor med nya. Med den psychologiska förståelsen att minnet av gamla vanor kvarstår, uppmuntrar denna app användare att fokusera på fördelaktiga beteenden. Med ett visuellt tilltalande gränssnitt byggt i React, stylat med Tailwind CSS och Daisy UI, kan användaren enkelt logga sina framsteg och hålla motivationen uppe. Integrationen av bibilioteket Recharts möjliggör tydliga data visualiseringar av deras resa, vilket ger värdefulla insikter i beteendemönster och hjälper användaren att se sina framsteg över tid.",
 
         text2:
-          "På den tekniska sidan använder Habit Replacer ett ASP.NET Core API för datahämtning och lagring, med planer på att övergå till en SQL-databas med Entity Framework för effektiv datahantering. Framtida förbättringar kommer att inkludera användarautentisering, vilket gör det möjligt för individer att skapa personliga konton för en skräddarsydd upplevelse. Detta projekt fungerar inte bara som ett kraftfullt verktyg för personlig utveckling utan representerar också en betydande läromöjlighet inom moderna webbutvecklingsteknologier.",
-        technologies: "TypeScript, React, Tailwind, DaisyUI, ASP.NET Core, C#",
+          "På den tekniska sidan använder Habit Replacer ett ASP.NET Core API för datahämtning och lagring, med planer på att övergå till en Microsoft SQL Server databas med Entity Framework Core för effektiv datahantering. Framtida förbättringar kommer att inkludera användarautentisering, vilket gör det möjligt för individer att skapa personliga konton för en skräddarsydd upplevelse. Detta projekt fungerar inte bara som ett kraftfullt verktyg för personlig utveckling utan representerar också en betydande läromöjlighet inom moderna webbutvecklingsteknologier.",
+        technologies: "TypeScript, React, Tailwind, DaisyUI, C#, ASP.NET Core, Entity Framework Core",
         githubLink: "https://github.com/timabloom/habit-replacer-tracker",
         website: "https://habit-replacer-tracker.onrender.com/",
         image: habitTrackerApp,
@@ -107,11 +106,10 @@ export default function projectInfo(language, project) {
     } else if (project === 2) {
       return {
         heading: "Tarot Sanctuary",
-        subHeading: "(under utveckling)",
         text1:
-          "Tarot Sanctuary är en intuitiv och interaktiv plattform för tarottolkning, som erbjuder historiska kortlekar för användning på ett roligt och lekfullt sätt. Detta projekt har varit en ovärderlig lärresurs, där jag har kunnat fördjupa min kunskap i SvelteKit, ett frontend-vänligt meta-ramverk som nu uppskattas av en växande skara utvecklare, mig själv inkluderad",
+          "Tarot Sanctuary är en intuitiv och interaktiv plattform för tarottolkning, som erbjuder historiska kortlekar för användning på ett roligt och lekfullt sätt. Detta projekt har varit en ovärderlig lärresurs, där jag har kunnat fördjupa min kunskap i SvelteKit, ett frontend-vänligt meta-ramverk som nu uppskattas av en växande skara utvecklare, mig själv inkluderad.",
         text2:
-          "Jag har lärt mig att använda AI:s kraft genom Codeium och ChatGPT, och har framgångsrikt satt upp en egen lokal chatbot. Mina designfärdigheter har förfinats genom detta projekt, då jag tagit mig tid att lära mig och utnyttja Figma, vilket har resulterat i ett gränssnitt som, enligt min mening, är visuellt tilltalande.",
+          "Mina designfärdigheter har förfinats genom detta projekt, då jag tagit mig tid att lära mig och utnyttja Figma, vilket har resulterat i ett gränssnitt som, enligt min mening, är visuellt tilltalande.",
         technologies: "JavaScript, TypeScript, Node.js, SvelteKit",
         githubLink: "https://github.com/timabloom/tarot-sanctuary",
         website: "https://tarot-sanctuary.onrender.com",
@@ -122,7 +120,7 @@ export default function projectInfo(language, project) {
       return {
         heading: "Kalejdoskop API",
         text1:
-          "Detta projekt utgör en del av min praktik hos Sverok och MÄN. Trots att jag huvudsakligen är inriktad på frontend-utveckling, fann jag mig själv äventyra in i backend-teknologier för att möta organisationernas behov. Här utvecklade jag en Express-applikation. Utöver detta, tog jag även på mig en ledarroll där jag styrde ett litet team bestående av två andra studenter. Tillsammans skapade vi en webbplats, en adminpanel och Express-applikationen. Alla dessa element är specifikt utformade för ett spel som heter Kalejdoskop.",
+          "Detta projekt utgör en del av min praktik hos Sverok och MÄN. Trots att jag huvudsakligen är inriktad på frontend-utveckling, fann jag mig själv äventyra in i backend-teknologier för att möta organisationernas behov. Här utvecklade jag en Express-applikation. Utöver detta, tog jag även på mig en ledarroll där jag styrde ett litet team bestående av två andra studenter. Tillsammans skapade vi en webbplats, en adminpanel och en Express-applikation. Alla dessa element är specifikt utformade för ett spel som heter Kalejdoskop.",
 
         text2:
           "Under denna process förbättrades min förmåga att anpassa mig till nya utmaningar. Jag tog mig an okända uppgifter och lärde mig nya tekniska färdigheter, med särskilt fokus på backend-teknologier. Dessutom fick jag en djupare förståelse för webbsäkerhetsprinciper. Utmaningarna jag ställdes inför under detta projekt har utan tvekan bidragit till att jag har blivit en mer mångsidig och välrundad webbutvecklare.",
@@ -139,7 +137,7 @@ export default function projectInfo(language, project) {
       return {
         heading: "Min Portfolio",
         text1:
-          "Jag har lärt mig mycket av att göra en egen portfolio-hemsida.  Hemsidan har två inbyggda språkalternativ: engelska och svenska. Jag älskar om mörkt tema så jag skapade ett sådant tillval för de som gillar det. Jag använde biblioteket Chakra UI för styling och Framer Motion för animationer. Jag använde också Recoil istället för React context.",
+          "Jag har lärt mig mycket av att göra en egen portfolio-hemsida.  Hemsidan har två inbyggda språkalternativ: engelska och svenska. Jag älskar mörkt tema så jag skapade ett sådant tillval för de som gillar det. Jag använde biblioteket Chakra UI för styling och Framer Motion för animationer. Jag använde också Recoil istället för React context för att hantera globala variabler.",
         technologies: "JavaScript, Node.js, React, Chakra UI, Framer Motion",
         githubLink: "https://github.com/timabloom/my-portfolio",
         website: "https://timothy-magees-portfolio.onrender.com",
@@ -150,7 +148,7 @@ export default function projectInfo(language, project) {
       return {
         heading: "Cat images in a Heartbeat",
         text1:
-          "“Cat images in a heartbeat” är en webbsida gjord för kattälskare byggd under en kurs i JavaScript. Hemsidan visar 12 bedårande kattbilder per sida hämtade från ett API. En snygg funktion på den här webbsidan är att om användaren svävar över en kattbild kommer den att förstoras och krympa tillbaka till tempot av ett hjärtslag.",
+          "“Cat images in a heartbeat” är en hemsida gjord för kattälskare byggd under en kurs i JavaScript. Hemsidan visar 12 bedårande kattbilder per sida hämtade från ett API. En snygg funktion på den här hemsidan är att om användaren svävar över en kattbild kommer den att förstoras och krympa tillbaka till tempot av ett hjärtslag.",
         technologies: "JavaScript, CSS, Node.js",
         githubLink:
           "https://github.com/cme-timothy/cat-images-webpage-assignment",
