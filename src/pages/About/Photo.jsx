@@ -1,4 +1,4 @@
-import timothy from "../../assets/timothy.jpeg";
+import aboutPic from "../../assets/about-pic.jpg";
 import { Blurhash } from "react-blurhash";
 import { Box, Image, Flex, useColorModeValue, } from "@chakra-ui/react";
 import { useState } from "react";
@@ -16,11 +16,10 @@ function Photo() {
     <Box bg={bg} w="300px" p="8px">
       <Flex>
         <Image
-          src={timothy}
-          height={378}
-          width={284}
-          alt="Photo of me"
+          src={aboutPic}
+          alt="A photo of me"
           onLoad={handleLoad}
+          rounded={"lg"}
         />
         <Box position="absolute">
           <motion.div
@@ -30,7 +29,7 @@ function Photo() {
           >
             <Blurhash
               hash={"UZJ@zW~CMcoxvxngx]x]t6t7WCxYtRozV@aK"}
-              height={378}
+              height={350}
               width={284}
               resolutionX={32}
               resolutionY={32}
