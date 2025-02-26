@@ -1,4 +1,4 @@
-import aboutPic from "../../assets/about-pic.jpg";
+import aboutPic from "../../assets/about-pic.webp";
 import { Blurhash } from "react-blurhash";
 import { Box, Image, Flex, useColorModeValue, } from "@chakra-ui/react";
 import { useState } from "react";
